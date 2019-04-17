@@ -54,14 +54,38 @@
 		45B5D0C122655463009B90BD /* Chatting Time */ = {
 			isa = PBXGroup;
 			children = (
-				45B5D0C222655463009B90BD /* AppDelegate.swift */,
-				45B5D0C422655463009B90BD /* ViewController.swift */,
-				45B5D0C622655463009B90BD /* Main.storyboard */,
+				45B5D0D42265A8C7009B90BD /* Model */,
+				45B5D0D52265A8D1009B90BD /* View */,
+				45B5D0D62265A8FB009B90BD /* Controller */,
 				45B5D0C922655464009B90BD /* Assets.xcassets */,
-				45B5D0CB22655464009B90BD /* LaunchScreen.storyboard */,
 				45B5D0CE22655464009B90BD /* Info.plist */,
 			);
 			path = "Chatting Time";
+			sourceTree = "<group>";
+		};
+		45B5D0D42265A8C7009B90BD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		45B5D0D52265A8D1009B90BD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				45B5D0C622655463009B90BD /* Main.storyboard */,
+				45B5D0CB22655464009B90BD /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		45B5D0D62265A8FB009B90BD /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				45B5D0C222655463009B90BD /* AppDelegate.swift */,
+				45B5D0C422655463009B90BD /* ViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
