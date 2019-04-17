@@ -27,6 +27,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="53S-r1-38v" userLabel="WelcomeText">
                                         <rect key="frame" x="0.0" y="85" width="375" height="72"/>
                                         <color key="backgroundColor" white="1" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="72" id="Xoh-nu-9fJ"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="50"/>
                                         <state key="normal" title="Welcome">
                                             <color key="titleColor" white="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -34,11 +37,14 @@
                                         </state>
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9XO-C9-zvh" userLabel="bottomView">
-                                        <rect key="frame" x="0.0" y="583" width="375" height="144"/>
+                                        <rect key="frame" x="0.0" y="668" width="375" height="144"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4y4-kn-2hu" userLabel="Log In">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="72"/>
                                                 <color key="backgroundColor" red="0.47058823529411764" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="72" id="iNU-DR-79N"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="30"/>
                                                 <state key="normal" title="Log In">
                                                     <color key="titleColor" white="0.29999999999999999" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -47,6 +53,9 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4g4-1H-kXs">
                                                 <rect key="frame" x="0.0" y="72" width="375" height="72"/>
                                                 <color key="backgroundColor" red="0.39215686274509803" green="0.85098039215686272" blue="0.39215686274509803" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="72" id="otb-gF-mBn"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="30"/>
                                                 <state key="normal" title="Register">
                                                     <color key="titleColor" white="0.29999999999999999" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -68,17 +77,15 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="Ddf-zs-qJR" firstAttribute="leading" secondItem="Fq5-r5-twE" secondAttribute="leading" id="CRS-aO-pDw"/>
-                                    <constraint firstAttribute="bottom" secondItem="53S-r1-38v" secondAttribute="bottom" constant="655" id="ECf-jL-B2d"/>
                                     <constraint firstItem="53S-r1-38v" firstAttribute="top" secondItem="Fq5-r5-twE" secondAttribute="top" constant="85" id="EYh-fg-8SV"/>
+                                    <constraint firstAttribute="bottom" secondItem="9XO-C9-zvh" secondAttribute="bottom" id="Q36-ZO-crB"/>
                                     <constraint firstItem="9XO-C9-zvh" firstAttribute="leading" secondItem="Fq5-r5-twE" secondAttribute="leading" id="Qxl-KR-53i"/>
                                     <constraint firstAttribute="bottom" secondItem="Ddf-zs-qJR" secondAttribute="bottom" id="eiy-eL-o3t"/>
                                     <constraint firstAttribute="trailing" secondItem="9XO-C9-zvh" secondAttribute="trailing" id="gUT-aP-S9D"/>
-                                    <constraint firstItem="9XO-C9-zvh" firstAttribute="top" secondItem="Fq5-r5-twE" secondAttribute="top" constant="583" id="l2t-XP-MhZ"/>
                                     <constraint firstAttribute="trailing" secondItem="53S-r1-38v" secondAttribute="trailing" id="o89-xT-juo"/>
                                     <constraint firstAttribute="trailing" secondItem="Ddf-zs-qJR" secondAttribute="trailing" id="rKH-hc-UcK"/>
                                     <constraint firstItem="53S-r1-38v" firstAttribute="leading" secondItem="Fq5-r5-twE" secondAttribute="leading" id="uRK-JS-jpq"/>
                                     <constraint firstItem="Ddf-zs-qJR" firstAttribute="top" secondItem="Fq5-r5-twE" secondAttribute="top" id="vAm-iT-kUt"/>
-                                    <constraint firstAttribute="bottom" secondItem="9XO-C9-zvh" secondAttribute="bottom" constant="85" id="z9n-cw-L3S"/>
                                 </constraints>
                             </view>
                         </subviews>
