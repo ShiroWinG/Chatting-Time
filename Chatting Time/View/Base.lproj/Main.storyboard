@@ -29,7 +29,7 @@
         <!--Welcome-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" userLabel="Welcome" customClass="ViewController" customModule="Chatting_Time" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" userLabel="Welcome" customClass="WelcomeViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -117,7 +117,7 @@
         <!--Register-->
         <scene sceneID="wKX-lf-Nmi">
             <objects>
-                <viewController id="wcb-Y7-u0d" userLabel="Register" sceneMemberID="viewController">
+                <viewController id="wcb-Y7-u0d" userLabel="Register" customClass="RegisterViewController" customModule="Chatting_Time" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TGu-Ok-ZlQ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -189,6 +189,10 @@
                         <viewLayoutGuide key="safeArea" id="5r1-sJ-UYd"/>
                     </view>
                     <navigationItem key="navigationItem" title="Register" id="ReE-Lh-7tp" userLabel="Register"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="z0X-Y0-0Lj" id="OyN-2E-vvx"/>
+                        <outlet property="passwordTextField" destination="KAA-iG-bq6" id="Dxj-FX-dr5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wyx-sj-ztC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -197,7 +201,7 @@
         <!--Log In-->
         <scene sceneID="mhl-Yq-eoA">
             <objects>
-                <viewController id="7za-we-N68" userLabel="Log In" sceneMemberID="viewController">
+                <viewController id="7za-we-N68" userLabel="Log In" customClass="LogInViewController" customModule="Chatting_Time" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UMe-7i-FeH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -269,6 +273,10 @@
                         <viewLayoutGuide key="safeArea" id="r6y-3N-Vb1"/>
                     </view>
                     <navigationItem key="navigationItem" title="Log In" id="I3d-Ce-ajG" userLabel="Register"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="Hrp-qx-aKN" id="IO2-fL-0OE"/>
+                        <outlet property="passwordTextField" destination="fdP-CP-kgA" id="T8i-kD-DIu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aH9-eF-bgK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -277,31 +285,92 @@
         <!--Chatting Time-->
         <scene sceneID="RBz-zI-lh9">
             <objects>
-                <viewController id="mGc-np-Xau" userLabel="Chatting Time" sceneMemberID="viewController">
+                <viewController id="mGc-np-Xau" userLabel="Chatting Time" customClass="ChattingViewController" customModule="Chatting_Time" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="h7d-KN-gLh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launchBG" translatesAutoresizingMaskIntoConstraints="NO" id="NCw-uP-MFM">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launchBG" translatesAutoresizingMaskIntoConstraints="NO" id="NCw-uP-MFM">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                             </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lXX-OM-biU" userLabel="textView">
+                                <rect key="frame" x="0.0" y="747" width="375" height="65"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Your Message" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nuk-Mq-PW5">
+                                        <rect key="frame" x="8" y="10" width="305" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="YXy-14-zkX"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="avN-c1-31n">
+                                        <rect key="frame" x="321" y="7" width="46" height="36"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="36" id="54d-FR-Ecq"/>
+                                            <constraint firstAttribute="width" constant="46" id="oC3-jv-P1v"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Send"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="avN-c1-31n" firstAttribute="top" secondItem="lXX-OM-biU" secondAttribute="top" constant="7" id="7hp-T8-TnP"/>
+                                    <constraint firstItem="avN-c1-31n" firstAttribute="leading" secondItem="Nuk-Mq-PW5" secondAttribute="trailing" constant="8" id="F95-Ed-cR2"/>
+                                    <constraint firstItem="avN-c1-31n" firstAttribute="leading" secondItem="Nuk-Mq-PW5" secondAttribute="trailing" constant="8" id="blO-Ug-S5j"/>
+                                    <constraint firstItem="Nuk-Mq-PW5" firstAttribute="leading" secondItem="lXX-OM-biU" secondAttribute="leadingMargin" id="g7g-1C-Qho"/>
+                                    <constraint firstAttribute="trailing" secondItem="avN-c1-31n" secondAttribute="trailing" constant="8" id="hQb-2p-INA"/>
+                                    <constraint firstItem="Nuk-Mq-PW5" firstAttribute="top" secondItem="lXX-OM-biU" secondAttribute="top" constant="10" id="heY-rH-WF4"/>
+                                    <constraint firstAttribute="bottom" secondItem="avN-c1-31n" secondAttribute="bottom" constant="22" id="hfs-ob-0du"/>
+                                    <constraint firstAttribute="height" constant="65" id="uKr-ZR-u5b"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Zjb-MC-Hn0" userLabel="Message Table View">
+                                <rect key="frame" x="0.0" y="88" width="375" height="659"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="DTB-r3-ZoU" userLabel="Message Cell">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DTB-r3-ZoU" id="moN-0B-F1e">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="NCw-uP-MFM" firstAttribute="leading" secondItem="h7d-KN-gLh" secondAttribute="leading" id="0WP-e9-84S"/>
-                            <constraint firstAttribute="trailing" secondItem="NCw-uP-MFM" secondAttribute="trailing" id="7XU-Sy-KO3"/>
-                            <constraint firstItem="NCw-uP-MFM" firstAttribute="top" secondItem="h7d-KN-gLh" secondAttribute="top" id="VjC-CS-eGm"/>
-                            <constraint firstAttribute="bottom" secondItem="NCw-uP-MFM" secondAttribute="bottom" id="fn7-dt-YV7"/>
+                            <constraint firstItem="NCw-uP-MFM" firstAttribute="trailing" secondItem="as8-LN-PsM" secondAttribute="trailing" id="6Nl-1Q-ufO"/>
+                            <constraint firstItem="Zjb-MC-Hn0" firstAttribute="top" secondItem="as8-LN-PsM" secondAttribute="top" id="Rpq-SO-WUF"/>
+                            <constraint firstAttribute="bottom" secondItem="lXX-OM-biU" secondAttribute="bottom" id="T2m-6P-WAw"/>
+                            <constraint firstItem="lXX-OM-biU" firstAttribute="trailing" secondItem="as8-LN-PsM" secondAttribute="trailing" id="aju-Ga-azc"/>
+                            <constraint firstAttribute="bottom" secondItem="NCw-uP-MFM" secondAttribute="bottom" id="etu-Z3-KY3"/>
+                            <constraint firstItem="lXX-OM-biU" firstAttribute="top" secondItem="Zjb-MC-Hn0" secondAttribute="bottom" id="feM-Qn-dY3"/>
+                            <constraint firstItem="NCw-uP-MFM" firstAttribute="top" secondItem="h7d-KN-gLh" secondAttribute="top" id="gPM-6U-yA7"/>
+                            <constraint firstItem="lXX-OM-biU" firstAttribute="leading" secondItem="as8-LN-PsM" secondAttribute="leading" id="kP7-ML-gy4"/>
+                            <constraint firstItem="NCw-uP-MFM" firstAttribute="leading" secondItem="as8-LN-PsM" secondAttribute="leading" id="qsc-tI-v7E"/>
+                            <constraint firstItem="Zjb-MC-Hn0" firstAttribute="trailing" secondItem="as8-LN-PsM" secondAttribute="trailing" id="thI-V5-PGS"/>
+                            <constraint firstItem="Zjb-MC-Hn0" firstAttribute="leading" secondItem="as8-LN-PsM" secondAttribute="leading" id="uxD-In-4Xe"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="as8-LN-PsM"/>
                     </view>
                     <navigationItem key="navigationItem" title="Chatting Time" id="pNP-bJ-Coa">
                         <barButtonItem key="rightBarButtonItem" title="Log Out" id="nwF-ha-wXm" userLabel="logOut"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="heightConstraint" destination="uKr-ZR-u5b" id="mJC-qm-9M8"/>
+                        <outlet property="messageTableView" destination="Zjb-MC-Hn0" id="zg3-aN-qxZ"/>
+                        <outlet property="messageTextField" destination="Nuk-Mq-PW5" id="N7b-j7-tl1"/>
+                        <outlet property="sendButton" destination="avN-c1-31n" id="tnk-An-YyV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bWZ-zK-9F5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2182" y="101"/>
+            <point key="canvasLocation" x="2181.5999999999999" y="100.49261083743843"/>
         </scene>
     </scenes>
     <resources>
@@ -310,6 +379,6 @@
         <image name="launchBG" width="1242" height="2688"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="kmA-ve-fOx"/>
+        <segue reference="RNQ-Uz-aNV"/>
     </inferredMetricsTieBreakers>
 </document>

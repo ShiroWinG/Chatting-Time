@@ -7,17 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		45A3B552226914DF005CC12C /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A3B551226914DF005CC12C /* LogInViewController.swift */; };
+		45A3B5542269150D005CC12C /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A3B5532269150D005CC12C /* RegisterViewController.swift */; };
+		45A3B55622691534005CC12C /* ChattingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A3B55522691534005CC12C /* ChattingViewController.swift */; };
 		45B5D0C322655463009B90BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B5D0C222655463009B90BD /* AppDelegate.swift */; };
-		45B5D0C522655463009B90BD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B5D0C422655463009B90BD /* ViewController.swift */; };
+		45B5D0C522655463009B90BD /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B5D0C422655463009B90BD /* WelcomeViewController.swift */; };
 		45B5D0C822655463009B90BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45B5D0C622655463009B90BD /* Main.storyboard */; };
 		45B5D0CA22655464009B90BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45B5D0C922655464009B90BD /* Assets.xcassets */; };
 		45B5D0CD22655464009B90BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45B5D0CB22655464009B90BD /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		45A3B551226914DF005CC12C /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		45A3B5532269150D005CC12C /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		45A3B55522691534005CC12C /* ChattingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChattingViewController.swift; sourceTree = "<group>"; };
 		45B5D0BF22655463009B90BD /* Chatting Time.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Chatting Time.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		45B5D0C222655463009B90BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		45B5D0C422655463009B90BD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		45B5D0C422655463009B90BD /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		45B5D0C722655463009B90BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		45B5D0C922655464009B90BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		45B5D0CC22655464009B90BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -83,7 +89,10 @@
 			isa = PBXGroup;
 			children = (
 				45B5D0C222655463009B90BD /* AppDelegate.swift */,
-				45B5D0C422655463009B90BD /* ViewController.swift */,
+				45B5D0C422655463009B90BD /* WelcomeViewController.swift */,
+				45A3B551226914DF005CC12C /* LogInViewController.swift */,
+				45A3B5532269150D005CC12C /* RegisterViewController.swift */,
+				45A3B55522691534005CC12C /* ChattingViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -159,8 +168,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				45B5D0C522655463009B90BD /* ViewController.swift in Sources */,
+				45B5D0C522655463009B90BD /* WelcomeViewController.swift in Sources */,
+				45A3B55622691534005CC12C /* ChattingViewController.swift in Sources */,
 				45B5D0C322655463009B90BD /* AppDelegate.swift in Sources */,
+				45A3B552226914DF005CC12C /* LogInViewController.swift in Sources */,
+				45A3B5542269150D005CC12C /* RegisterViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
