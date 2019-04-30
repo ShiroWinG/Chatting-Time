@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class ChattingViewController: UIViewController {
 
@@ -21,7 +22,16 @@ class ChattingViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
-
+    @IBAction func logOutPressed(_ sender: Any) {
+        do {
+            try Auth.auth().signOut()
+            navigationController?.popToRootViewController(animated: true)
+        }
+        catch {
+            print("Error")
+        }
+    }
+    
 }
 
 //TODO: hide navigation bar when scrolling down

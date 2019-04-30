@@ -136,7 +136,7 @@
                                         </constraints>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="z0X-Y0-0Lj" userLabel="Email">
                                         <rect key="frame" x="8" y="93.666666666666657" width="359" height="35"/>
@@ -157,6 +157,7 @@
                                             <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
+                                            <action selector="registerPressed:" destination="wcb-Y7-u0d" eventType="touchUpInside" id="CUw-vb-6IL"/>
                                             <segue destination="mGc-np-Xau" kind="show" identifier="goToChat" id="RNQ-Uz-aNV"/>
                                         </connections>
                                     </button>
@@ -220,7 +221,7 @@
                                         </constraints>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hrp-qx-aKN" userLabel="Email">
                                         <rect key="frame" x="8" y="93.666666666666657" width="359" height="35"/>
@@ -280,7 +281,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aH9-eF-bgK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1084" y="-272"/>
+            <point key="canvasLocation" x="1084" y="-188"/>
         </scene>
         <!--Chatting Time-->
         <scene sceneID="RBz-zI-lh9">
@@ -359,7 +360,11 @@
                         <viewLayoutGuide key="safeArea" id="as8-LN-PsM"/>
                     </view>
                     <navigationItem key="navigationItem" title="Chatting Time" id="pNP-bJ-Coa">
-                        <barButtonItem key="rightBarButtonItem" title="Log Out" id="nwF-ha-wXm" userLabel="logOut"/>
+                        <barButtonItem key="rightBarButtonItem" title="Log Out" id="nwF-ha-wXm" userLabel="logOut">
+                            <connections>
+                                <action selector="logOutPressed:" destination="mGc-np-Xau" id="7K8-iX-seh"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="heightConstraint" destination="uKr-ZR-u5b" id="mJC-qm-9M8"/>
@@ -370,7 +375,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bWZ-zK-9F5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2181.5999999999999" y="100.49261083743843"/>
+            <point key="canvasLocation" x="2182" y="137"/>
         </scene>
     </scenes>
     <resources>

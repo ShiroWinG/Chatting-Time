@@ -21,6 +21,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let myDataBase = Database.database().reference()
         
+        myDataBase.setValue("We got data")
+        
         return true
     }
 
