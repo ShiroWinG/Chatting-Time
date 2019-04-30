@@ -54,7 +54,7 @@
                                                     <color key="titleColor" white="0.29999999999999999" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
-                                                    <segue destination="7za-we-N68" kind="show" id="QxV-H7-lFL"/>
+                                                    <segue destination="7za-we-N68" kind="show" identifier="goToLogIn" id="QxV-H7-lFL"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4g4-1H-kXs">
@@ -107,7 +107,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Welcome" id="AMP-E7-mDP"/>
                     <connections>
-                        <segue destination="mGc-np-Xau" kind="push" id="kmA-ve-fOx"/>
+                        <segue destination="mGc-np-Xau" kind="show" identifier="goToChat" id="kmA-ve-fOx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -157,7 +157,7 @@
                                             <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <segue destination="mGc-np-Xau" kind="show" id="RNQ-Uz-aNV"/>
+                                            <segue destination="mGc-np-Xau" kind="show" identifier="goToChat" id="RNQ-Uz-aNV"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -190,8 +190,8 @@
                     </view>
                     <navigationItem key="navigationItem" title="Register" id="ReE-Lh-7tp" userLabel="Register"/>
                     <connections>
-                        <outlet property="emailTextField" destination="z0X-Y0-0Lj" id="OyN-2E-vvx"/>
-                        <outlet property="passwordTextField" destination="KAA-iG-bq6" id="Dxj-FX-dr5"/>
+                        <outlet property="emailTextField" destination="z0X-Y0-0Lj" id="opq-uF-u26"/>
+                        <outlet property="passwordTextField" destination="KAA-iG-bq6" id="pdD-cG-I5l"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wyx-sj-ztC" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -241,7 +241,7 @@
                                             <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <segue destination="mGc-np-Xau" kind="show" id="xd9-GW-Dt8"/>
+                                            <segue destination="mGc-np-Xau" kind="show" identifier="goToChat" id="xd9-GW-Dt8"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -274,8 +274,8 @@
                     </view>
                     <navigationItem key="navigationItem" title="Log In" id="I3d-Ce-ajG" userLabel="Register"/>
                     <connections>
-                        <outlet property="emailTextField" destination="Hrp-qx-aKN" id="IO2-fL-0OE"/>
-                        <outlet property="passwordTextField" destination="fdP-CP-kgA" id="T8i-kD-DIu"/>
+                        <outlet property="emailTextField" destination="Hrp-qx-aKN" id="qmU-MH-nbQ"/>
+                        <outlet property="passwordTextField" destination="fdP-CP-kgA" id="l5y-go-TKi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aH9-eF-bgK" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -331,7 +331,7 @@
                                 <rect key="frame" x="0.0" y="88" width="375" height="659"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="DTB-r3-ZoU" userLabel="Message Cell">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MessageCell" id="DTB-r3-ZoU" userLabel="Message Cell">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DTB-r3-ZoU" id="moN-0B-F1e">
@@ -363,9 +363,9 @@
                     </navigationItem>
                     <connections>
                         <outlet property="heightConstraint" destination="uKr-ZR-u5b" id="mJC-qm-9M8"/>
-                        <outlet property="messageTableView" destination="Zjb-MC-Hn0" id="zg3-aN-qxZ"/>
-                        <outlet property="messageTextField" destination="Nuk-Mq-PW5" id="N7b-j7-tl1"/>
-                        <outlet property="sendButton" destination="avN-c1-31n" id="tnk-An-YyV"/>
+                        <outlet property="messageTableView" destination="Zjb-MC-Hn0" id="DXL-qJ-VN1"/>
+                        <outlet property="messageTextField" destination="Nuk-Mq-PW5" id="hKJ-kz-uqH"/>
+                        <outlet property="sendButton" destination="avN-c1-31n" id="iO6-aI-E8C"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bWZ-zK-9F5" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -379,6 +379,6 @@
         <image name="launchBG" width="1242" height="2688"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="RNQ-Uz-aNV"/>
+        <segue reference="kmA-ve-fOx"/>
     </inferredMetricsTieBreakers>
 </document>
