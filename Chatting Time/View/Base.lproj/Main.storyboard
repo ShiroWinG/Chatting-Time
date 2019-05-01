@@ -158,7 +158,6 @@
                                         </state>
                                         <connections>
                                             <action selector="registerPressed:" destination="wcb-Y7-u0d" eventType="touchUpInside" id="CUw-vb-6IL"/>
-                                            <segue destination="mGc-np-Xau" kind="show" identifier="goToChat" id="RNQ-Uz-aNV"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -193,6 +192,7 @@
                     <connections>
                         <outlet property="emailTextField" destination="z0X-Y0-0Lj" id="opq-uF-u26"/>
                         <outlet property="passwordTextField" destination="KAA-iG-bq6" id="pdD-cG-I5l"/>
+                        <segue destination="mGc-np-Xau" kind="show" identifier="goToChat" id="qvc-m4-wC1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wyx-sj-ztC" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -242,7 +242,7 @@
                                             <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <segue destination="mGc-np-Xau" kind="show" identifier="goToChat" id="xd9-GW-Dt8"/>
+                                            <action selector="logInPressed:" destination="7za-we-N68" eventType="touchUpInside" id="JED-aJ-aj9"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -277,11 +277,12 @@
                     <connections>
                         <outlet property="emailTextField" destination="Hrp-qx-aKN" id="qmU-MH-nbQ"/>
                         <outlet property="passwordTextField" destination="fdP-CP-kgA" id="l5y-go-TKi"/>
+                        <segue destination="mGc-np-Xau" kind="show" identifier="goToChat" id="2E1-rl-2B0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aH9-eF-bgK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1084" y="-188"/>
+            <point key="canvasLocation" x="1084" y="-191"/>
         </scene>
         <!--Chatting Time-->
         <scene sceneID="RBz-zI-lh9">
@@ -384,6 +385,6 @@
         <image name="launchBG" width="1242" height="2688"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="kmA-ve-fOx"/>
+        <segue reference="qvc-m4-wC1"/>
     </inferredMetricsTieBreakers>
 </document>
