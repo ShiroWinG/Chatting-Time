@@ -7,3 +7,8 @@
 //
 
 import Foundation
+
+class Message {
+    var sender: String = ""
+    var message: String = ""
+}

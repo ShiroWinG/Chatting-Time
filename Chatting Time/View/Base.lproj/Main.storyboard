@@ -292,9 +292,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launchBG" translatesAutoresizingMaskIntoConstraints="NO" id="NCw-uP-MFM">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lXX-OM-biU" userLabel="textView">
                                 <rect key="frame" x="0.0" y="747" width="375" height="65"/>
                                 <subviews>
@@ -346,15 +343,11 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="NCw-uP-MFM" firstAttribute="trailing" secondItem="as8-LN-PsM" secondAttribute="trailing" id="6Nl-1Q-ufO"/>
                             <constraint firstItem="Zjb-MC-Hn0" firstAttribute="top" secondItem="as8-LN-PsM" secondAttribute="top" id="Rpq-SO-WUF"/>
                             <constraint firstAttribute="bottom" secondItem="lXX-OM-biU" secondAttribute="bottom" id="T2m-6P-WAw"/>
                             <constraint firstItem="lXX-OM-biU" firstAttribute="trailing" secondItem="as8-LN-PsM" secondAttribute="trailing" id="aju-Ga-azc"/>
-                            <constraint firstAttribute="bottom" secondItem="NCw-uP-MFM" secondAttribute="bottom" id="etu-Z3-KY3"/>
                             <constraint firstItem="lXX-OM-biU" firstAttribute="top" secondItem="Zjb-MC-Hn0" secondAttribute="bottom" id="feM-Qn-dY3"/>
-                            <constraint firstItem="NCw-uP-MFM" firstAttribute="top" secondItem="h7d-KN-gLh" secondAttribute="top" id="gPM-6U-yA7"/>
                             <constraint firstItem="lXX-OM-biU" firstAttribute="leading" secondItem="as8-LN-PsM" secondAttribute="leading" id="kP7-ML-gy4"/>
-                            <constraint firstItem="NCw-uP-MFM" firstAttribute="leading" secondItem="as8-LN-PsM" secondAttribute="leading" id="qsc-tI-v7E"/>
                             <constraint firstItem="Zjb-MC-Hn0" firstAttribute="trailing" secondItem="as8-LN-PsM" secondAttribute="trailing" id="thI-V5-PGS"/>
                             <constraint firstItem="Zjb-MC-Hn0" firstAttribute="leading" secondItem="as8-LN-PsM" secondAttribute="leading" id="uxD-In-4Xe"/>
                         </constraints>
@@ -382,7 +375,6 @@
     <resources>
         <image name="bg1" width="1242" height="2688"/>
         <image name="bg2" width="1242" height="2688"/>
-        <image name="launchBG" width="1242" height="2688"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="qvc-m4-wC1"/>
