@@ -20,6 +20,7 @@ class LogInViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    
     @IBAction func logInPressed(_ sender: Any) {
         Auth.auth().signIn(withEmail: emailTextField.text!, password: passwordTextField.text!) { (user, error) in
             

@@ -19,6 +19,7 @@ class RegisterViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    
     @IBAction func registerPressed(_ sender: Any) {
         
         Auth.auth().createUser(withEmail: emailTextField.text!, password: passwordTextField.text!) { (user, error) in

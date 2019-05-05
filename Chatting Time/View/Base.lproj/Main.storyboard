@@ -322,7 +322,6 @@
                                     <constraint firstItem="Nuk-Mq-PW5" firstAttribute="leading" secondItem="lXX-OM-biU" secondAttribute="leadingMargin" id="g7g-1C-Qho"/>
                                     <constraint firstAttribute="trailing" secondItem="avN-c1-31n" secondAttribute="trailing" constant="8" id="hQb-2p-INA"/>
                                     <constraint firstItem="Nuk-Mq-PW5" firstAttribute="top" secondItem="lXX-OM-biU" secondAttribute="top" constant="10" id="heY-rH-WF4"/>
-                                    <constraint firstAttribute="bottom" secondItem="avN-c1-31n" secondAttribute="bottom" constant="22" id="hfs-ob-0du"/>
                                     <constraint firstAttribute="height" constant="65" id="uKr-ZR-u5b"/>
                                 </constraints>
                             </view>
