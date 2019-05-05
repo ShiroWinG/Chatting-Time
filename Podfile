@@ -9,6 +9,7 @@ target 'Chatting Time' do
 
 pod 'Firebase'
 pod 'Firebase/Auth'
+pod 'Firebase/Core'
 pod 'Firebase/Database'
 pod 'SVProgressHUD'
 pod 'ChameleonFramework'

@@ -19,11 +19,11 @@
 		45B5D0C822655463009B90BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45B5D0C622655463009B90BD /* Main.storyboard */; };
 		45B5D0CA22655464009B90BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45B5D0C922655464009B90BD /* Assets.xcassets */; };
 		45B5D0CD22655464009B90BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45B5D0CB22655464009B90BD /* LaunchScreen.storyboard */; };
-		B9AD9828C5ADC380C6FE407A /* Pods_Chatting_Time.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59B992EEE1BA06DD9487BA9C /* Pods_Chatting_Time.framework */; };
+		E37FFAA22F5B5F65ACD71829 /* Pods_Chatting_Time.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C76483CDB79B49A8B4FAA84D /* Pods_Chatting_Time.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		009F94D57BD6CDBF925707A8 /* Pods-Chatting Time.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chatting Time.debug.xcconfig"; path = "Target Support Files/Pods-Chatting Time/Pods-Chatting Time.debug.xcconfig"; sourceTree = "<group>"; };
+		2942324D508BBD5BC592DE0E /* Pods-Chatting Time.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chatting Time.debug.xcconfig"; path = "Target Support Files/Pods-Chatting Time/Pods-Chatting Time.debug.xcconfig"; sourceTree = "<group>"; };
 		458F0652226AB6180053019C /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		458F06572278AC3B0053019C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		458F066B227E4AF70053019C /* CustomMessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMessageCell.swift; sourceTree = "<group>"; };
@@ -38,8 +38,8 @@
 		45B5D0C922655464009B90BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		45B5D0CC22655464009B90BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		45B5D0CE22655464009B90BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		59B992EEE1BA06DD9487BA9C /* Pods_Chatting_Time.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Chatting_Time.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FF4A3681B76C35B6E314F973 /* Pods-Chatting Time.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chatting Time.release.xcconfig"; path = "Target Support Files/Pods-Chatting Time/Pods-Chatting Time.release.xcconfig"; sourceTree = "<group>"; };
+		7CB437CCEB7C7C9CDFB40054 /* Pods-Chatting Time.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chatting Time.release.xcconfig"; path = "Target Support Files/Pods-Chatting Time/Pods-Chatting Time.release.xcconfig"; sourceTree = "<group>"; };
+		C76483CDB79B49A8B4FAA84D /* Pods_Chatting_Time.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Chatting_Time.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,21 +47,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B9AD9828C5ADC380C6FE407A /* Pods_Chatting_Time.framework in Frameworks */,
+				E37FFAA22F5B5F65ACD71829 /* Pods_Chatting_Time.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2BE79E7C13320D5C5458C089 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				59B992EEE1BA06DD9487BA9C /* Pods_Chatting_Time.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		458F0654227899050053019C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -86,7 +78,7 @@
 				45B5D0C122655463009B90BD /* Chatting Time */,
 				45B5D0C022655463009B90BD /* Products */,
 				6B54F611987CD8BFC210EC01 /* Pods */,
-				2BE79E7C13320D5C5458C089 /* Frameworks */,
+				CB759D80CDC5F08752ED97EB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -143,10 +135,18 @@
 		6B54F611987CD8BFC210EC01 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				009F94D57BD6CDBF925707A8 /* Pods-Chatting Time.debug.xcconfig */,
-				FF4A3681B76C35B6E314F973 /* Pods-Chatting Time.release.xcconfig */,
+				2942324D508BBD5BC592DE0E /* Pods-Chatting Time.debug.xcconfig */,
+				7CB437CCEB7C7C9CDFB40054 /* Pods-Chatting Time.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		CB759D80CDC5F08752ED97EB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C76483CDB79B49A8B4FAA84D /* Pods_Chatting_Time.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -156,11 +156,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 45B5D0D122655464009B90BD /* Build configuration list for PBXNativeTarget "Chatting Time" */;
 			buildPhases = (
-				E26E73EEB92A6B227B788CC2 /* [CP] Check Pods Manifest.lock */,
+				1312F9448E1B97B8422D85CC /* [CP] Check Pods Manifest.lock */,
 				45B5D0BB22655463009B90BD /* Sources */,
 				45B5D0BC22655463009B90BD /* Frameworks */,
 				45B5D0BD22655463009B90BD /* Resources */,
-				32FBE15A1B5069F83A110768 /* [CP] Embed Pods Frameworks */,
+				1C61CEE07ADE78B0C8EB2626 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -220,7 +220,29 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		32FBE15A1B5069F83A110768 /* [CP] Embed Pods Frameworks */ = {
+		1312F9448E1B97B8422D85CC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Chatting Time-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1C61CEE07ADE78B0C8EB2626 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -250,28 +272,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Chatting Time/Pods-Chatting Time-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E26E73EEB92A6B227B788CC2 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Chatting Time-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -431,7 +431,7 @@
 		};
 		45B5D0D222655464009B90BD /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 009F94D57BD6CDBF925707A8 /* Pods-Chatting Time.debug.xcconfig */;
+			baseConfigurationReference = 2942324D508BBD5BC592DE0E /* Pods-Chatting Time.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -450,7 +450,7 @@
 		};
 		45B5D0D322655464009B90BD /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FF4A3681B76C35B6E314F973 /* Pods-Chatting Time.release.xcconfig */;
+			baseConfigurationReference = 7CB437CCEB7C7C9CDFB40054 /* Pods-Chatting Time.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

@@ -78,6 +78,7 @@ DEPENDENCIES:
   - ChameleonFramework
   - Firebase
   - Firebase/Auth
+  - Firebase/Core
   - Firebase/Database
   - SVProgressHUD
 
@@ -114,6 +115,6 @@ SPEC CHECKSUMS:
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
 
-PODFILE CHECKSUM: c43e7577e60afa67a9a01e83030967b291f083f8
+PODFILE CHECKSUM: 6891a613999c8217d7c60b4012e429a48fec9969
 
 COCOAPODS: 1.6.1

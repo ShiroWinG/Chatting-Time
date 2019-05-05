@@ -312,6 +312,10 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <state key="normal" title="Send"/>
+                                        <connections>
+                                            <action selector="sendPressed:" destination="mGc-np-Xau" eventType="touchUpInside" id="08d-pl-Ybm"/>
+                                            <action selector="sendPressed:" destination="7mk-FO-87m" eventType="touchUpInside" id="YgD-1i-gJD"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -367,6 +371,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bWZ-zK-9F5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="7mk-FO-87m" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2182" y="137"/>
         </scene>

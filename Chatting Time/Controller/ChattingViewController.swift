@@ -10,6 +10,8 @@ import UIKit
 import Firebase
 
 class ChattingViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate {
+    
+    var messageArray : [Message] = [Message]()
 
     @IBOutlet var sendButton: UIButton!
     @IBOutlet var messageTextField: UITextField!
@@ -17,6 +19,7 @@ class ChattingViewController: UIViewController, UITableViewDelegate, UITableView
     @IBOutlet var heightConstraint: NSLayoutConstraint!
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         
         navigationItem.hidesBackButton = true
@@ -35,9 +38,12 @@ class ChattingViewController: UIViewController, UITableViewDelegate, UITableView
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(tableViewTapped))
         messageTableView.addGestureRecognizer(tapGesture)
         
+        retrieveMessages()
+        
     }
     
     @IBAction func logOutPressed(_ sender: Any) {
+        
         do {
             try Auth.auth().signOut()
             navigationController?.popToRootViewController(animated: true)
@@ -47,9 +53,10 @@ class ChattingViewController: UIViewController, UITableViewDelegate, UITableView
         }
     }
     
-    //MARK: text field UI editing
+    //MARK: - text field UI editing
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
+        
         UIView.animate(withDuration: 0.24) {
             self.heightConstraint.constant = 345
             self.view.layoutIfNeeded()
@@ -57,6 +64,7 @@ class ChattingViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
+        
         UIView.animate(withDuration: 0.35) {
             self.heightConstraint.constant = 65
             self.view.layoutIfNeeded()
@@ -67,35 +75,82 @@ class ChattingViewController: UIViewController, UITableViewDelegate, UITableView
         messageTextField.endEditing(true)
     }
     
-    //MARK: table view editing and using custom cells
+    //MARK: - table view editing and using custom cells
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "customMessageCell", for: indexPath) as! CustomMessageCell
         
-        let messageArray = ["Chungus", "Chungus2Chungus2Chungus2Chungus2Chungus2Chungus2Chungus2Chungus2Chungus2Chungus2Chungus2Chungus2Chungus2Chungus2Chungus2", "Chungus3"]
-        
-        cell.messageBody.text = messageArray[indexPath.row]
+        cell.messageBody.text = messageArray[indexPath.row].message
+        cell.senderUsername.text = messageArray[indexPath.row].sender
         
         return cell
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return 3
+        return messageArray.count
         
     }
     
-    
     func configureTableView() {
+        
         messageTableView.rowHeight = UITableView.automaticDimension
         messageTableView.estimatedRowHeight = 120
     }
     
+    //MARK: - message related functions
     
+    @IBAction func sendPressed(_ sender: Any) {
+        
+        messageTextField.endEditing(true)
+        
+        messageTextField.isEnabled = false
+        sendButton.isEnabled = false
+        
+        let messagesDB = Database.database().reference().child("Messages")
+        let messageDictionary = ["Sender": Auth.auth().currentUser?.email, "MessageBody": messageTextField.text!]
+        
+        messagesDB.childByAutoId().setValue(messageDictionary) {
+            (error, reference) in
+            if error != nil {
+                print(error!)
+            }
+                
+            else {
+                print("Messaged saved")
+                self.messageTextField.isEnabled = true
+                self.sendButton.isEnabled = true
+                self.messageTextField.text = ""
+            }
+        }
+    }
+    
+    func retrieveMessages() {
+        
+        let messageDB = Database.database().reference().child("Messages")
+        
+        messageDB.observe(.childAdded) { (snapshot) in
+            
+            let snapshotValue = snapshot.value as! Dictionary<String, String>
+            let text = snapshotValue["MessageBody"]!
+            let sender = snapshotValue["Sender"]!
+            
+            let message = Message()
+            message.sender = sender
+            message.message = text
+            
+            self.messageArray.append(message)
+            
+            self.configureTableView()
+            self.messageTableView.reloadData()
+        }
+    }
 }
 
 //TODO: hide navigation bar when scrolling down
 //TODO: make navigation bar black when it's here
 //TODO: Automize height change for different screen
 //TODO: Sync keyboard animation
+//TODO: add avatar image
+//TODO: remove the lines
