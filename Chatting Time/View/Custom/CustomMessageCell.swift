@@ -14,12 +14,16 @@ class CustomMessageCell: UITableViewCell {
     @IBOutlet var avatarImageview: UIImageView!
     @IBOutlet var senderUsername: UILabel!
     @IBOutlet var messageBody: UILabel!
-    @IBOutlet var textBG: UIImageView!
     
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+
+        avatarImageview.layer.borderWidth = 1
+        avatarImageview.layer.masksToBounds = false
+        avatarImageview.layer.borderColor = UIColor.clear.cgColor
+        avatarImageview.layer.cornerRadius = avatarImageview.frame.height/2
+        avatarImageview.clipsToBounds = true
     }
 }
 

@@ -87,13 +87,12 @@ class ChattingViewController: UIViewController, UITableViewDelegate, UITableView
         
         cell.messageBody.text = messageArray[indexPath.row].message
         cell.senderUsername.text = messageArray[indexPath.row].sender
-        cell.avatarImageview.backgroundColor = UIColor.flatWatermelon()
+        cell.avatarImageview.backgroundColor = UIColor(hexString: "#EF629F")!
 
         if cell.senderUsername.text == Auth.auth().currentUser?.email as String? {
             
             cell.messageBackground.backgroundColor = UIColor(gradientStyle: UIGradientStyle.leftToRight, withFrame: cell.messageBackground.frame, andColors: [UIColor(hexString: "#7F7FD5")!, UIColor(hexString: "#86A8E7")!, UIColor(hexString: "#91EAE4")!])
-            cell.textBG.image = UIImage(contentsOfFile:"selfTextBG")
-            cell.avatarImageview.backgroundColor = UIColor.flatPowderBlue()
+            cell.avatarImageview.backgroundColor = UIColor(hexString: "#7F7FD5")!
             
         }
         else {
@@ -169,5 +168,4 @@ class ChattingViewController: UIViewController, UITableViewDelegate, UITableView
 //TODO: Automize height change for different screen
 //TODO: Sync keyboard animation
 //TODO: maybe make message bubble fancy
-//TODO: security
-//TODO: resize avatar
+//TODO: gif bg?

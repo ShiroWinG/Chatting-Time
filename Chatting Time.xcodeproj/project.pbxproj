@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		452CBB1422821852008FF54C /* SF-Pro-Display-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 452CBB1222821852008FF54C /* SF-Pro-Display-Thin.otf */; };
+		452CBB1522821852008FF54C /* SF-Pro-Display-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 452CBB1322821852008FF54C /* SF-Pro-Display-Light.otf */; };
 		458F0653226AB6180053019C /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458F0652226AB6180053019C /* Message.swift */; };
 		458F066D227E4AF70053019C /* CustomMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458F066B227E4AF70053019C /* CustomMessageCell.swift */; };
 		458F066E227E4AF70053019C /* CustomMessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 458F066C227E4AF70053019C /* CustomMessageCell.xib */; };
@@ -24,6 +26,8 @@
 
 /* Begin PBXFileReference section */
 		2942324D508BBD5BC592DE0E /* Pods-Chatting Time.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chatting Time.debug.xcconfig"; path = "Target Support Files/Pods-Chatting Time/Pods-Chatting Time.debug.xcconfig"; sourceTree = "<group>"; };
+		452CBB1222821852008FF54C /* SF-Pro-Display-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Thin.otf"; sourceTree = "<group>"; };
+		452CBB1322821852008FF54C /* SF-Pro-Display-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Light.otf"; sourceTree = "<group>"; };
 		458F0652226AB6180053019C /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		458F066B227E4AF70053019C /* CustomMessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMessageCell.swift; sourceTree = "<group>"; };
 		458F066C227E4AF70053019C /* CustomMessageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomMessageCell.xib; sourceTree = "<group>"; };
@@ -54,6 +58,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		452CBB1122821844008FF54C /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				452CBB1322821852008FF54C /* SF-Pro-Display-Light.otf */,
+				452CBB1222821852008FF54C /* SF-Pro-Display-Thin.otf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		458F0654227899050053019C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -93,6 +106,7 @@
 		45B5D0C122655463009B90BD /* Chatting Time */ = {
 			isa = PBXGroup;
 			children = (
+				452CBB1122821844008FF54C /* Fonts */,
 				45B5D0D42265A8C7009B90BD /* Model */,
 				45B5D0D52265A8D1009B90BD /* View */,
 				45B5D0D62265A8FB009B90BD /* Controller */,
@@ -209,8 +223,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				452CBB1522821852008FF54C /* SF-Pro-Display-Light.otf in Resources */,
 				45B5D0CD22655464009B90BD /* LaunchScreen.storyboard in Resources */,
 				45B5D0CA22655464009B90BD /* Assets.xcassets in Resources */,
+				452CBB1422821852008FF54C /* SF-Pro-Display-Thin.otf in Resources */,
 				45C02D59227FA99200D422E9 /* GoogleService-Info.plist in Resources */,
 				458F066E227E4AF70053019C /* CustomMessageCell.xib in Resources */,
 				45B5D0C822655463009B90BD /* Main.storyboard in Resources */,
