@@ -91,9 +91,14 @@ class ChattingViewController: UIViewController, UITableViewDelegate, UITableView
 
         if cell.senderUsername.text == Auth.auth().currentUser?.email as String? {
             
-            //cell.messageBackground.backgroundColor = UIColor(gradientStyle: UIGradientStyle.topToBottom, withFrame: CGRect, andColors: [UIColor.flatPowderBlue()])
+            cell.messageBackground.backgroundColor = UIColor(gradientStyle: UIGradientStyle.leftToRight, withFrame: cell.messageBackground.frame, andColors: [UIColor(hexString: "#7F7FD5")!, UIColor(hexString: "#86A8E7")!, UIColor(hexString: "#91EAE4")!])
             cell.textBG.image = UIImage(contentsOfFile:"selfTextBG")
             cell.avatarImageview.backgroundColor = UIColor.flatPowderBlue()
+            
+        }
+        else {
+            
+            cell.messageBackground.backgroundColor = UIColor(gradientStyle: UIGradientStyle.leftToRight, withFrame: cell.messageBackground.frame, andColors: [UIColor(hexString: "#EF629F")!, UIColor(hexString: "#EECDA3")!])
             
         }
         
