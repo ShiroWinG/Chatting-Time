@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		458F0653226AB6180053019C /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458F0652226AB6180053019C /* Message.swift */; };
-		458F06582278AC3B0053019C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 458F06572278AC3B0053019C /* GoogleService-Info.plist */; };
 		458F066D227E4AF70053019C /* CustomMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458F066B227E4AF70053019C /* CustomMessageCell.swift */; };
 		458F066E227E4AF70053019C /* CustomMessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 458F066C227E4AF70053019C /* CustomMessageCell.xib */; };
 		45A3B552226914DF005CC12C /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A3B551226914DF005CC12C /* LogInViewController.swift */; };
@@ -19,13 +18,13 @@
 		45B5D0C822655463009B90BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45B5D0C622655463009B90BD /* Main.storyboard */; };
 		45B5D0CA22655464009B90BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45B5D0C922655464009B90BD /* Assets.xcassets */; };
 		45B5D0CD22655464009B90BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45B5D0CB22655464009B90BD /* LaunchScreen.storyboard */; };
+		45C02D59227FA99200D422E9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 45C02D58227FA99200D422E9 /* GoogleService-Info.plist */; };
 		E37FFAA22F5B5F65ACD71829 /* Pods_Chatting_Time.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C76483CDB79B49A8B4FAA84D /* Pods_Chatting_Time.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2942324D508BBD5BC592DE0E /* Pods-Chatting Time.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chatting Time.debug.xcconfig"; path = "Target Support Files/Pods-Chatting Time/Pods-Chatting Time.debug.xcconfig"; sourceTree = "<group>"; };
 		458F0652226AB6180053019C /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
-		458F06572278AC3B0053019C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		458F066B227E4AF70053019C /* CustomMessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMessageCell.swift; sourceTree = "<group>"; };
 		458F066C227E4AF70053019C /* CustomMessageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomMessageCell.xib; sourceTree = "<group>"; };
 		45A3B551226914DF005CC12C /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
@@ -38,6 +37,7 @@
 		45B5D0C922655464009B90BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		45B5D0CC22655464009B90BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		45B5D0CE22655464009B90BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		45C02D58227FA99200D422E9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7CB437CCEB7C7C9CDFB40054 /* Pods-Chatting Time.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chatting Time.release.xcconfig"; path = "Target Support Files/Pods-Chatting Time/Pods-Chatting Time.release.xcconfig"; sourceTree = "<group>"; };
 		C76483CDB79B49A8B4FAA84D /* Pods_Chatting_Time.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Chatting_Time.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -58,7 +58,7 @@
 			isa = PBXGroup;
 			children = (
 				45B5D0CE22655464009B90BD /* Info.plist */,
-				458F06572278AC3B0053019C /* GoogleService-Info.plist */,
+				45C02D58227FA99200D422E9 /* GoogleService-Info.plist */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -210,8 +210,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				45B5D0CD22655464009B90BD /* LaunchScreen.storyboard in Resources */,
-				458F06582278AC3B0053019C /* GoogleService-Info.plist in Resources */,
 				45B5D0CA22655464009B90BD /* Assets.xcassets in Resources */,
+				45C02D59227FA99200D422E9 /* GoogleService-Info.plist in Resources */,
 				458F066E227E4AF70053019C /* CustomMessageCell.xib in Resources */,
 				45B5D0C822655463009B90BD /* Main.storyboard in Resources */,
 			);

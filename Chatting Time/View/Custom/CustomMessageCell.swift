@@ -14,6 +14,7 @@ class CustomMessageCell: UITableViewCell {
     @IBOutlet var avatarImageview: UIImageView!
     @IBOutlet var senderUsername: UILabel!
     @IBOutlet var messageBody: UILabel!
+    @IBOutlet var textBG: UIImageView!
     
     
     override func awakeFromNib() {
@@ -21,3 +22,5 @@ class CustomMessageCell: UITableViewCell {
         // Initialization code
     }
 }
+
+//TODO: change font to San fran

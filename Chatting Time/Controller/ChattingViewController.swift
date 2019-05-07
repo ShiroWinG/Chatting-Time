@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import ChameleonFramework
 
 class ChattingViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate {
     
@@ -18,11 +19,14 @@ class ChattingViewController: UIViewController, UITableViewDelegate, UITableView
     @IBOutlet var messageTableView: UITableView!
     @IBOutlet var heightConstraint: NSLayoutConstraint!
     
+    
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()
         
         navigationItem.hidesBackButton = true
+        messageTableView.separatorStyle = .none
 
         messageTableView.delegate = self
         messageTableView.dataSource = self
@@ -83,6 +87,15 @@ class ChattingViewController: UIViewController, UITableViewDelegate, UITableView
         
         cell.messageBody.text = messageArray[indexPath.row].message
         cell.senderUsername.text = messageArray[indexPath.row].sender
+        cell.avatarImageview.backgroundColor = UIColor.flatWatermelon()
+
+        if cell.senderUsername.text == Auth.auth().currentUser?.email as String? {
+            
+            //cell.messageBackground.backgroundColor = UIColor(gradientStyle: UIGradientStyle.topToBottom, withFrame: CGRect, andColors: [UIColor.flatPowderBlue()])
+            cell.textBG.image = UIImage(contentsOfFile:"selfTextBG")
+            cell.avatarImageview.backgroundColor = UIColor.flatPowderBlue()
+            
+        }
         
         return cell
     }
@@ -148,9 +161,8 @@ class ChattingViewController: UIViewController, UITableViewDelegate, UITableView
     }
 }
 
-//TODO: hide navigation bar when scrolling down
-//TODO: make navigation bar black when it's here
 //TODO: Automize height change for different screen
 //TODO: Sync keyboard animation
-//TODO: add avatar image
-//TODO: remove the lines
+//TODO: maybe make message bubble fancy
+//TODO: security
+//TODO: resize avatar
