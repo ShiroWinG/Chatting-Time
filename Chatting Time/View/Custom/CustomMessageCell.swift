@@ -26,5 +26,3 @@ class CustomMessageCell: UITableViewCell {
         avatarImageview.clipsToBounds = true
     }
 }
-
-//TODO: change font to San fran

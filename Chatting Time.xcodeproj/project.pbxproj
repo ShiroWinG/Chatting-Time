@@ -20,7 +20,7 @@
 		45B5D0C822655463009B90BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45B5D0C622655463009B90BD /* Main.storyboard */; };
 		45B5D0CA22655464009B90BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45B5D0C922655464009B90BD /* Assets.xcassets */; };
 		45B5D0CD22655464009B90BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45B5D0CB22655464009B90BD /* LaunchScreen.storyboard */; };
-		45C02D59227FA99200D422E9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 45C02D58227FA99200D422E9 /* GoogleService-Info.plist */; };
+		45D27F80228B4F7A00B20EE5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 45D27F7F228B4F7A00B20EE5 /* GoogleService-Info.plist */; };
 		E37FFAA22F5B5F65ACD71829 /* Pods_Chatting_Time.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C76483CDB79B49A8B4FAA84D /* Pods_Chatting_Time.framework */; };
 /* End PBXBuildFile section */
 
@@ -41,7 +41,7 @@
 		45B5D0C922655464009B90BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		45B5D0CC22655464009B90BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		45B5D0CE22655464009B90BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		45C02D58227FA99200D422E9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		45D27F7F228B4F7A00B20EE5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7CB437CCEB7C7C9CDFB40054 /* Pods-Chatting Time.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chatting Time.release.xcconfig"; path = "Target Support Files/Pods-Chatting Time/Pods-Chatting Time.release.xcconfig"; sourceTree = "<group>"; };
 		C76483CDB79B49A8B4FAA84D /* Pods_Chatting_Time.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Chatting_Time.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -71,7 +71,7 @@
 			isa = PBXGroup;
 			children = (
 				45B5D0CE22655464009B90BD /* Info.plist */,
-				45C02D58227FA99200D422E9 /* GoogleService-Info.plist */,
+				45D27F7F228B4F7A00B20EE5 /* GoogleService-Info.plist */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -227,9 +227,9 @@
 				45B5D0CD22655464009B90BD /* LaunchScreen.storyboard in Resources */,
 				45B5D0CA22655464009B90BD /* Assets.xcassets in Resources */,
 				452CBB1422821852008FF54C /* SF-Pro-Display-Thin.otf in Resources */,
-				45C02D59227FA99200D422E9 /* GoogleService-Info.plist in Resources */,
 				458F066E227E4AF70053019C /* CustomMessageCell.xib in Resources */,
 				45B5D0C822655463009B90BD /* Main.storyboard in Resources */,
+				45D27F80228B4F7A00B20EE5 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

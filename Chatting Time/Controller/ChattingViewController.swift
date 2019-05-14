@@ -26,6 +26,7 @@ class ChattingViewController: UIViewController, UITableViewDelegate, UITableView
         super.viewDidLoad()
         
         navigationItem.hidesBackButton = true
+        
         messageTableView.separatorStyle = .none
 
         messageTableView.delegate = self
@@ -168,4 +169,4 @@ class ChattingViewController: UIViewController, UITableViewDelegate, UITableView
 //TODO: Automize height change for different screen
 //TODO: Sync keyboard animation
 //TODO: maybe make message bubble fancy
-//TODO: gif bg?
+//TODO: black navigation bar

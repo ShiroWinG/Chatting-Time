@@ -19,9 +19,9 @@ class WelcomeViewController: UIViewController {
         
         let animatedGradient = AnimatedGradientView(frame: view.bounds)
         animatedGradient.animationValues = [(colors: ["#2BC0E4", "#EAECC6"], .up, .axial),
-                                            (colors: ["#833ab4", "#fd1d1d", "#fcb045"], .right, .axial),
+                                            (colors: ["#C779D0", "#FF5F6D", "#DBD65C"], .right, .axial),
                                             (colors: ["#003973", "#E5E5BE"], .down, .axial),
-                                            (colors: ["#1E9600", "#FFF200", "#FF0000"], .left, .axial)]
+                                            (colors: ["#c2e59c", "#FFF94C", "#FF4E50"], .left, .axial)]
         animatedView.addSubview(animatedGradient)
         // Do any additional setup after loading the view.
     }
