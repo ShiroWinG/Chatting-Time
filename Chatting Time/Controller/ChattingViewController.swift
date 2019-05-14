@@ -19,14 +19,12 @@ class ChattingViewController: UIViewController, UITableViewDelegate, UITableView
     @IBOutlet var messageTableView: UITableView!
     @IBOutlet var heightConstraint: NSLayoutConstraint!
     
-    
-    
     override func viewDidLoad() {
         
         super.viewDidLoad()
         
         navigationItem.hidesBackButton = true
-        
+
         messageTableView.separatorStyle = .none
 
         messageTableView.delegate = self
@@ -47,6 +45,13 @@ class ChattingViewController: UIViewController, UITableViewDelegate, UITableView
         
     }
     
+    //Makes the navigation bar black
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.navigationBar.barTintColor = UIColor.black
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+    }
+
     @IBAction func logOutPressed(_ sender: Any) {
         
         do {
@@ -169,4 +174,4 @@ class ChattingViewController: UIViewController, UITableViewDelegate, UITableView
 //TODO: Automize height change for different screen
 //TODO: Sync keyboard animation
 //TODO: maybe make message bubble fancy
-//TODO: black navigation bar
+//TODO: make view controllers share one animated view
