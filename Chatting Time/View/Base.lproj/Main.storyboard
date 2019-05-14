@@ -29,7 +29,7 @@
         <!--Welcome-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" userLabel="Welcome" customClass="WelcomeViewController" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" userLabel="Welcome" customClass="WelcomeViewController" customModule="Chatting_Time" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -37,13 +37,14 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fq5-r5-twE" userLabel="mainTopView">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg1" translatesAutoresizingMaskIntoConstraints="NO" id="Ddf-zs-qJR" userLabel="welcomeBG">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                                    </imageView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qyt-c4-qoG" userLabel="animatedView">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="668"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9XO-C9-zvh" userLabel="bottomView">
                                         <rect key="frame" x="0.0" y="668" width="375" height="144"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4y4-kn-2hu" userLabel="Log In">
+                                            <button opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4y4-kn-2hu" userLabel="Log In">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="72"/>
                                                 <color key="backgroundColor" red="0.47058823529411764" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
@@ -57,7 +58,7 @@
                                                     <segue destination="7za-we-N68" kind="show" identifier="goToLogIn" id="QxV-H7-lFL"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4g4-1H-kXs">
+                                            <button opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4g4-1H-kXs">
                                                 <rect key="frame" x="0.0" y="72" width="375" height="72"/>
                                                 <color key="backgroundColor" red="0.39215686274509803" green="0.85098039215686272" blue="0.39215686274509803" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
@@ -86,13 +87,13 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="Ddf-zs-qJR" firstAttribute="leading" secondItem="Fq5-r5-twE" secondAttribute="leading" id="CRS-aO-pDw"/>
+                                    <constraint firstItem="9XO-C9-zvh" firstAttribute="top" secondItem="qyt-c4-qoG" secondAttribute="bottom" id="3rh-Q3-zMb"/>
+                                    <constraint firstItem="qyt-c4-qoG" firstAttribute="top" secondItem="Fq5-r5-twE" secondAttribute="top" id="PFP-sx-pmr"/>
                                     <constraint firstAttribute="bottom" secondItem="9XO-C9-zvh" secondAttribute="bottom" id="Q36-ZO-crB"/>
                                     <constraint firstItem="9XO-C9-zvh" firstAttribute="leading" secondItem="Fq5-r5-twE" secondAttribute="leading" id="Qxl-KR-53i"/>
-                                    <constraint firstAttribute="bottom" secondItem="Ddf-zs-qJR" secondAttribute="bottom" id="eiy-eL-o3t"/>
+                                    <constraint firstItem="qyt-c4-qoG" firstAttribute="leading" secondItem="Fq5-r5-twE" secondAttribute="leading" id="cBI-84-bbt"/>
                                     <constraint firstAttribute="trailing" secondItem="9XO-C9-zvh" secondAttribute="trailing" id="gUT-aP-S9D"/>
-                                    <constraint firstAttribute="trailing" secondItem="Ddf-zs-qJR" secondAttribute="trailing" id="rKH-hc-UcK"/>
-                                    <constraint firstItem="Ddf-zs-qJR" firstAttribute="top" secondItem="Fq5-r5-twE" secondAttribute="top" id="vAm-iT-kUt"/>
+                                    <constraint firstAttribute="trailing" secondItem="qyt-c4-qoG" secondAttribute="trailing" id="jqm-b6-IrH"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -107,6 +108,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Welcome" id="AMP-E7-mDP"/>
                     <connections>
+                        <outlet property="animatedView" destination="qyt-c4-qoG" id="Qmy-Tj-nWH"/>
                         <segue destination="mGc-np-Xau" kind="show" identifier="goToChat" id="kmA-ve-fOx"/>
                     </connections>
                 </viewController>
@@ -377,10 +379,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="bg1" width="1242" height="2688"/>
         <image name="bg2" width="1242" height="2688"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="qvc-m4-wC1"/>
+        <segue reference="kmA-ve-fOx"/>
     </inferredMetricsTieBreakers>
 </document>

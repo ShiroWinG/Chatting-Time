@@ -13,6 +13,7 @@ pod 'Firebase/Core'
 pod 'Firebase/Database'
 pod 'SVProgressHUD'
 pod 'ChameleonFramework'
+pod "AnimatedGradientView"
 
 
 

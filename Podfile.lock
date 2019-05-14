@@ -1,4 +1,5 @@
 PODS:
+  - AnimatedGradientView (1.1.1)
   - ChameleonFramework (2.1.0):
     - ChameleonFramework/Default (= 2.1.0)
   - ChameleonFramework/Default (2.1.0)
@@ -76,6 +77,7 @@ PODS:
   - SVProgressHUD (2.2.5)
 
 DEPENDENCIES:
+  - AnimatedGradientView
   - ChameleonFramework
   - Firebase
   - Firebase/Auth
@@ -85,6 +87,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - AnimatedGradientView
     - ChameleonFramework
     - Firebase
     - FirebaseAnalytics
@@ -101,6 +104,7 @@ SPEC REPOS:
     - SVProgressHUD
 
 SPEC CHECKSUMS:
+  AnimatedGradientView: e3d928407034be3e97ae62564a4071da4b10b0f2
   ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
   Firebase: fa80b9d987ca014a1ba9357496ef2a0178b28b12
   FirebaseAnalytics: 1743c5f4de3687d0745709dfdc4b1dea1484f44c
@@ -116,6 +120,6 @@ SPEC CHECKSUMS:
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
 
-PODFILE CHECKSUM: 6891a613999c8217d7c60b4012e429a48fec9969
+PODFILE CHECKSUM: 4c5ab387e4047eaaec8a9855da5538caeda97057
 
 COCOAPODS: 1.6.1
