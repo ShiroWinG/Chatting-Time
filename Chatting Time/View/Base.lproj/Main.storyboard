@@ -9,6 +9,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Pro-Display-Light.otf">
+            <string>SFProDisplay-Light</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Navigation Controller-->
         <scene sceneID="9Ab-T1-NmW">
@@ -39,7 +44,48 @@
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qyt-c4-qoG" userLabel="animatedView">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="668"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oOG-Hh-Aiu" userLabel="tempView">
+                                                <rect key="frame" x="0.0" y="150" width="375" height="170"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="21°" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n8H-uv-8Mv" userLabel="Temperature Label">
+                                                        <rect key="frame" x="210" y="0.0" width="150" height="90"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="90" id="azd-tw-aV6"/>
+                                                            <constraint firstAttribute="width" constant="150" id="lB5-O9-aKM"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="SFProDisplay-Light" family="SF Pro Display" pointSize="80"/>
+                                                        <color key="textColor" red="1" green="0.99997437" blue="0.99999129769999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lfg-G3-THS" userLabel="City Label">
+                                                        <rect key="frame" x="90" y="90" width="270" height="80"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="270" id="2rW-nd-DOU"/>
+                                                            <constraint firstAttribute="height" constant="80" id="ovX-Sp-hGE"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="SFProDisplay-Light" family="SF Pro Display" pointSize="26"/>
+                                                        <color key="textColor" red="1" green="0.99997437" blue="0.99999129769999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="170" id="FrU-JA-fJl"/>
+                                                    <constraint firstAttribute="trailing" secondItem="n8H-uv-8Mv" secondAttribute="trailing" constant="15" id="Pmf-T2-hse"/>
+                                                    <constraint firstItem="n8H-uv-8Mv" firstAttribute="top" secondItem="oOG-Hh-Aiu" secondAttribute="top" id="SPH-hv-guq"/>
+                                                    <constraint firstAttribute="trailing" secondItem="lfg-G3-THS" secondAttribute="trailing" constant="15" id="jtG-Yp-IiZ"/>
+                                                    <constraint firstAttribute="bottom" secondItem="lfg-G3-THS" secondAttribute="bottom" id="qUb-H2-zxs"/>
+                                                    <constraint firstItem="lfg-G3-THS" firstAttribute="top" secondItem="oOG-Hh-Aiu" secondAttribute="top" constant="90" id="s5O-7v-eGs"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="oOG-Hh-Aiu" firstAttribute="top" secondItem="qyt-c4-qoG" secondAttribute="top" constant="150" id="5i3-Gz-HPL"/>
+                                            <constraint firstItem="oOG-Hh-Aiu" firstAttribute="leading" secondItem="qyt-c4-qoG" secondAttribute="leading" id="Yvq-to-vMm"/>
+                                            <constraint firstAttribute="trailing" secondItem="oOG-Hh-Aiu" secondAttribute="trailing" id="fcz-j0-aME"/>
+                                        </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9XO-C9-zvh" userLabel="bottomView">
                                         <rect key="frame" x="0.0" y="668" width="375" height="144"/>
@@ -109,6 +155,8 @@
                     <navigationItem key="navigationItem" title="Welcome" id="AMP-E7-mDP"/>
                     <connections>
                         <outlet property="animatedView" destination="qyt-c4-qoG" id="Qmy-Tj-nWH"/>
+                        <outlet property="cityLabel" destination="lfg-G3-THS" id="cld-71-BAl"/>
+                        <outlet property="tempLabel" destination="n8H-uv-8Mv" id="qDr-g9-G3c"/>
                         <segue destination="mGc-np-Xau" kind="show" identifier="goToChat" id="kmA-ve-fOx"/>
                     </connections>
                 </viewController>
@@ -383,6 +431,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="qvc-m4-wC1"/>
+        <segue reference="kmA-ve-fOx"/>
     </inferredMetricsTieBreakers>
 </document>

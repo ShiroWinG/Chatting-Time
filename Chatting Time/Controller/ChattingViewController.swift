@@ -42,7 +42,6 @@ class ChattingViewController: UIViewController, UITableViewDelegate, UITableView
         messageTableView.addGestureRecognizer(tapGesture)
         
         retrieveMessages()
-        
     }
     
     //Makes the navigation bar black
@@ -174,4 +173,4 @@ class ChattingViewController: UIViewController, UITableViewDelegate, UITableView
 //TODO: Automize height change for different screen
 //TODO: Sync keyboard animation
 //TODO: maybe make message bubble fancy
-//TODO: make view controllers share one animated view
+//TODO: start at buttom of table view

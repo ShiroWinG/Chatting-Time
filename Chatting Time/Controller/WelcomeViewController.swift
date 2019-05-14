@@ -9,10 +9,21 @@
 import UIKit
 import Firebase
 import AnimatedGradientView
+import CoreLocation
+import Alamofire
+import SwiftyJSON
 
 class WelcomeViewController: UIViewController {
 
     @IBOutlet var animatedView: UIView!
+    @IBOutlet var tempLabel: UILabel!
+    @IBOutlet var cityLabel: UILabel!
+    
+    let WEATHER_URL = "http://api.openweathermap.org/data/2.5/weather"
+    let APP_ID = "e72ca729af228beabd5d20e3b7749713"
+    /***Get your own App ID at https://openweathermap.org/appid ****/
+    
+    let locationManager = CLLocationManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,3 +39,4 @@ class WelcomeViewController: UIViewController {
 }
 
 //TODO: add weather
+//TODO: fix temp view
