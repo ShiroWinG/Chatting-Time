@@ -16,7 +16,7 @@ class LogInViewController: UIViewController {
     @IBOutlet var emailTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
     @IBOutlet var animatedView: UIView!
-    
+    @IBOutlet var errorMessage: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,7 +38,8 @@ class LogInViewController: UIViewController {
         Auth.auth().signIn(withEmail: emailTextField.text!, password: passwordTextField.text!) { (user, error) in
             
             if error != nil {
-                print(error!)
+                print(error!._code)
+                SVProgressHUD.dismiss()
             }
             else {
                 print("Log in successful")
@@ -51,4 +52,4 @@ class LogInViewController: UIViewController {
     }
 }
 
-//TODO: add error messages
+//TODO: add error messagess

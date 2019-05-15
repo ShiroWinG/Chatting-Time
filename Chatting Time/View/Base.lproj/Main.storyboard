@@ -210,12 +210,25 @@
                                             <action selector="registerPressed:" destination="wcb-Y7-u0d" eventType="touchUpInside" id="CUw-vb-6IL"/>
                                         </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="28w-co-Xrj" userLabel="errorMessage">
+                                        <rect key="frame" x="0.0" y="50.666666666666657" width="375" height="25"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="25" id="NGa-Aw-Sgp"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="25" id="PdR-9t-SoE"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="SFProDisplay-Light" family="SF Pro Display" pointSize="20"/>
+                                        <color key="textColor" red="0.96470588239999999" green="0.30980392159999998" blue="0.34901960780000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="28w-co-Xrj" secondAttribute="trailing" id="4s8-bj-i0A"/>
                                     <constraint firstAttribute="trailingMargin" secondItem="fqp-Fx-KPT" secondAttribute="trailing" id="5LS-SK-21y"/>
                                     <constraint firstItem="fqp-Fx-KPT" firstAttribute="leading" secondItem="65q-UB-e4S" secondAttribute="leadingMargin" id="AnP-U4-uIr"/>
                                     <constraint firstAttribute="trailingMargin" secondItem="KAA-iG-bq6" secondAttribute="trailing" id="CnZ-2v-82m"/>
                                     <constraint firstItem="z0X-Y0-0Lj" firstAttribute="leading" secondItem="65q-UB-e4S" secondAttribute="leadingMargin" id="J1p-pT-OXo"/>
+                                    <constraint firstItem="28w-co-Xrj" firstAttribute="leading" secondItem="65q-UB-e4S" secondAttribute="leading" id="XPR-eR-aiq"/>
+                                    <constraint firstItem="z0X-Y0-0Lj" firstAttribute="top" secondItem="28w-co-Xrj" secondAttribute="bottom" constant="18" id="YkU-Sj-djv"/>
                                     <constraint firstAttribute="height" constant="322" id="a7h-fj-7aX"/>
                                     <constraint firstItem="KAA-iG-bq6" firstAttribute="centerY" secondItem="65q-UB-e4S" secondAttribute="centerY" id="cki-xh-1BO"/>
                                     <constraint firstItem="KAA-iG-bq6" firstAttribute="centerX" secondItem="65q-UB-e4S" secondAttribute="centerX" id="elO-Yv-0rx"/>
@@ -242,6 +255,7 @@
                     <connections>
                         <outlet property="animatedView" destination="Vg4-LV-aHw" id="hOn-Wd-szd"/>
                         <outlet property="emailTextField" destination="z0X-Y0-0Lj" id="opq-uF-u26"/>
+                        <outlet property="errorMessage" destination="28w-co-Xrj" id="htD-pG-bzz"/>
                         <outlet property="passwordTextField" destination="KAA-iG-bq6" id="pdD-cG-I5l"/>
                         <segue destination="mGc-np-Xau" kind="show" identifier="goToChat" id="qvc-m4-wC1"/>
                     </connections>
@@ -297,6 +311,15 @@
                                             <action selector="logInPressed:" destination="7za-we-N68" eventType="touchUpInside" id="JED-aJ-aj9"/>
                                         </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qEu-6w-meW" userLabel="errorMessage">
+                                        <rect key="frame" x="0.0" y="50.666666666666657" width="375" height="25"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="25" id="dhq-1F-4Xj"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="SFProDisplay-Light" family="SF Pro Display" pointSize="20"/>
+                                        <color key="textColor" red="0.96470588235294119" green="0.30980392156862746" blue="0.34901960784313724" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="322" id="68R-rs-bJy"/>
@@ -304,12 +327,15 @@
                                     <constraint firstItem="Hrp-qx-aKN" firstAttribute="leading" secondItem="bhV-q7-3Wn" secondAttribute="leadingMargin" id="AJv-HX-03z"/>
                                     <constraint firstAttribute="trailingMargin" secondItem="Hrp-qx-aKN" secondAttribute="trailing" id="G6P-y8-Xym"/>
                                     <constraint firstItem="fdP-CP-kgA" firstAttribute="leading" secondItem="bhV-q7-3Wn" secondAttribute="leadingMargin" id="Ix5-bi-7r6"/>
+                                    <constraint firstItem="qEu-6w-meW" firstAttribute="leading" secondItem="bhV-q7-3Wn" secondAttribute="leading" id="Kbt-PJ-pzE"/>
                                     <constraint firstItem="fdP-CP-kgA" firstAttribute="centerY" secondItem="bhV-q7-3Wn" secondAttribute="centerY" id="Tnq-Jb-rT0"/>
                                     <constraint firstItem="KfZ-fX-sdt" firstAttribute="leading" secondItem="bhV-q7-3Wn" secondAttribute="leadingMargin" id="Uqf-MK-Yz6"/>
                                     <constraint firstItem="fdP-CP-kgA" firstAttribute="top" secondItem="Hrp-qx-aKN" secondAttribute="bottom" constant="15" id="YYS-2o-CTL"/>
                                     <constraint firstItem="KfZ-fX-sdt" firstAttribute="top" secondItem="fdP-CP-kgA" secondAttribute="bottom" constant="25" id="d9r-l6-2RP"/>
                                     <constraint firstAttribute="trailingMargin" secondItem="KfZ-fX-sdt" secondAttribute="trailing" id="dJY-gc-tvO"/>
                                     <constraint firstItem="fdP-CP-kgA" firstAttribute="centerX" secondItem="bhV-q7-3Wn" secondAttribute="centerX" id="dW7-Hb-fFk"/>
+                                    <constraint firstAttribute="trailing" secondItem="qEu-6w-meW" secondAttribute="trailing" id="kLB-RZ-Xw4"/>
+                                    <constraint firstItem="Hrp-qx-aKN" firstAttribute="top" secondItem="qEu-6w-meW" secondAttribute="bottom" constant="18" id="yOS-kp-mqX"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -329,6 +355,7 @@
                     <connections>
                         <outlet property="animatedView" destination="ftI-Gf-kdr" id="8aH-ph-crG"/>
                         <outlet property="emailTextField" destination="Hrp-qx-aKN" id="qmU-MH-nbQ"/>
+                        <outlet property="errorMessage" destination="qEu-6w-meW" id="LfW-Aj-pHn"/>
                         <outlet property="passwordTextField" destination="fdP-CP-kgA" id="l5y-go-TKi"/>
                         <segue destination="mGc-np-Xau" kind="show" identifier="goToChat" id="2E1-rl-2B0"/>
                     </connections>
@@ -371,7 +398,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="avN-c1-31n" firstAttribute="top" secondItem="lXX-OM-biU" secondAttribute="top" constant="7" id="7hp-T8-TnP"/>
                                     <constraint firstItem="avN-c1-31n" firstAttribute="leading" secondItem="Nuk-Mq-PW5" secondAttribute="trailing" constant="8" id="F95-Ed-cR2"/>
@@ -430,6 +457,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="kmA-ve-fOx"/>
+        <segue reference="2E1-rl-2B0"/>
     </inferredMetricsTieBreakers>
 </document>

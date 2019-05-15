@@ -16,6 +16,7 @@ class RegisterViewController: UIViewController {
     @IBOutlet var emailTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
     @IBOutlet var animatedView: UIView!
+    @IBOutlet var errorMessage: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()

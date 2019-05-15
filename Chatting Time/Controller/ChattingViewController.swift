@@ -32,6 +32,8 @@ class ChattingViewController: UIViewController, UITableViewDelegate, UITableView
         
         messageTextField.delegate = self
         
+        messageTextField.keyboardAppearance = UIKeyboardAppearance.dark
+        
         messageTableView.register(UINib(nibName: "CustomMessageCell", bundle: nil), forCellReuseIdentifier: "customMessageCell")
         
         configureTableView()
