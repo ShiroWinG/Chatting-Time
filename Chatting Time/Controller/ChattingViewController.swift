@@ -174,3 +174,4 @@ class ChattingViewController: UIViewController, UITableViewDelegate, UITableView
 //TODO: Sync keyboard animation
 //TODO: maybe make message bubble fancy
 //TODO: start at buttom of table view
+//TODO: let user stay signed in?

@@ -23,9 +23,9 @@ class LogInViewController: UIViewController {
         
         let animatedGradient = AnimatedGradientView(frame: view.bounds)
         animatedGradient.animationValues = [(colors: ["#2BC0E4", "#EAECC6"], .up, .axial),
-                                            (colors: ["#C779D0", "#FF5F6D", "#DBD65C"], .right, .axial),
-                                            (colors: ["#003973", "#E5E5BE"], .down, .axial),
-                                            (colors: ["#c2e59c", "#FFF94C", "#FF4E50"], .left, .axial)]
+                                            (colors: ["#C6FFDD", "#f7797d"], .right, .axial),
+                                            (colors: ["#00d2ff", "#E5E5BE"], .down, .axial),
+                                            (colors: ["#c2e59c", "#ffc3a0"], .left, .axial)]
         animatedView.addSubview(animatedGradient)
         
         // Do any additional setup after loading the view.
