@@ -20,6 +20,8 @@ class RegisterViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        emailTextField.autocorrectionType = .no
 
         let animatedGradient = AnimatedGradientView(frame: view.bounds)
         animatedGradient.animationValues = [(colors: ["#2BC0E4", "#EAECC6"], .up, .axial),

@@ -32,13 +32,9 @@ class ChattingViewController: UIViewController, UITableViewDelegate, UITableView
         
         messageTextField.delegate = self
         
-        messageTextField.keyboardAppearance = UIKeyboardAppearance.dark
-        
         messageTableView.register(UINib(nibName: "CustomMessageCell", bundle: nil), forCellReuseIdentifier: "customMessageCell")
         
         configureTableView()
-        
-        messageTextField.autocorrectionType = .no
         
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(tableViewTapped))
         messageTableView.addGestureRecognizer(tapGesture)
@@ -53,32 +49,17 @@ class ChattingViewController: UIViewController, UITableViewDelegate, UITableView
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
     }
 
+    //Go back to previous view and change the navigation bar to black
     @IBAction func logOutPressed(_ sender: Any) {
         
         do {
             try Auth.auth().signOut()
+            self.navigationController?.navigationBar.barTintColor = nil
+            self.navigationController?.navigationBar.titleTextAttributes = nil
             navigationController?.popToRootViewController(animated: true)
         }
         catch {
             print("Error")
-        }
-    }
-    
-    //MARK: - text field UI editing
-    
-    func textFieldDidBeginEditing(_ textField: UITextField) {
-        
-        UIView.animate(withDuration: 0.24) {
-            self.heightConstraint.constant = 345
-            self.view.layoutIfNeeded()
-        }
-    }
-    
-    func textFieldDidEndEditing(_ textField: UITextField) {
-        
-        UIView.animate(withDuration: 0.35) {
-            self.heightConstraint.constant = 65
-            self.view.layoutIfNeeded()
         }
     }
     
@@ -118,7 +99,6 @@ class ChattingViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     func configureTableView() {
-        
         messageTableView.rowHeight = UITableView.automaticDimension
         messageTableView.estimatedRowHeight = 120
     }
@@ -173,7 +153,7 @@ class ChattingViewController: UIViewController, UITableViewDelegate, UITableView
 }
 
 //TODO: Automize height change for different screen
-//TODO: Sync keyboard animation
-//TODO: maybe make message bubble fancy
+//TODO: maybe make message bubble fancy (gradient flow cells?)
 //TODO: start at buttom of table view
 //TODO: let user stay signed in?
+//TODO: redesign icon

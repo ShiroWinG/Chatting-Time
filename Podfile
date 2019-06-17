@@ -16,6 +16,7 @@ pod 'ChameleonFramework'
 pod 'AnimatedGradientView'
 pod 'SwiftyJSON'
 pod 'Alamofire'
+pod 'IQKeyboardManagerSwift'
 
 
 
