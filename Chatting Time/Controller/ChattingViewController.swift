@@ -42,20 +42,17 @@ class ChattingViewController: UIViewController, UITableViewDelegate, UITableView
         retrieveMessages()
     }
     
-    //Makes the navigation bar black
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        self.navigationController?.navigationBar.barTintColor = UIColor.black
-        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+    //Go straight to bottom
+    override func viewDidAppear(_ animated: Bool) {
+        let scrollPoint = CGPoint(x: 0, y: self.messageTableView.contentSize.height - self.messageTableView.frame.size.height)
+        self.messageTableView.setContentOffset(scrollPoint, animated: false)
     }
-
-    //Go back to previous view and change the navigation bar to black
+    
+    //Go back to previous view
     @IBAction func logOutPressed(_ sender: Any) {
         
         do {
             try Auth.auth().signOut()
-            self.navigationController?.navigationBar.barTintColor = nil
-            self.navigationController?.navigationBar.titleTextAttributes = nil
             navigationController?.popToRootViewController(animated: true)
         }
         catch {
@@ -154,6 +151,5 @@ class ChattingViewController: UIViewController, UITableViewDelegate, UITableView
 
 //TODO: Automize height change for different screen
 //TODO: maybe make message bubble fancy (gradient flow cells?)
-//TODO: start at buttom of table view
 //TODO: let user stay signed in?
 //TODO: redesign icon

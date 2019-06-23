@@ -29,8 +29,6 @@ class LogInViewController: UIViewController {
                                             (colors: ["#00d2ff", "#E5E5BE"], .down, .axial),
                                             (colors: ["#c2e59c", "#ffc3a0"], .left, .axial)]
         animatedView.addSubview(animatedGradient)
-        
-        // Do any additional setup after loading the view.
     }
     
     @IBAction func logInPressed(_ sender: Any) {
