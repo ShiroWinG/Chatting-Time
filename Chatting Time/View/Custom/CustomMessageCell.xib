@@ -34,18 +34,28 @@
                             <constraint firstAttribute="height" constant="40" id="V82-De-UMs"/>
                         </constraints>
                     </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xYA-In-Kp5" userLabel="Animated View">
+                        <rect key="frame" x="53" y="9.9999999999999964" width="257" height="60.666666666666657"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="20"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PQP-O3-6hm">
                         <rect key="frame" x="53" y="9.9999999999999964" width="257" height="60.666666666666657"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" verticalHuggingPriority="750" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r0R-yU-sSa">
-                                <rect key="frame" x="15" y="3" width="244" height="32.333333333333336"/>
+                                <rect key="frame" x="15" y="3" width="244" height="20.333333333333332"/>
                                 <fontDescription key="fontDescription" name="SFProDisplay-Thin" family="SF Pro Display" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="751" verticalHuggingPriority="751" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JbA-h4-pzF">
-                                <rect key="frame" x="15" y="33.333333333333336" width="230" height="20.333333333333336"/>
-                                <fontDescription key="fontDescription" name="SFProDisplay-Light" family="SF Pro Display" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="751" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JbA-h4-pzF">
+                                <rect key="frame" x="15" y="25" width="230" height="26"/>
+                                <fontDescription key="fontDescription" name="SFProDisplay-Light" family="SF Pro Display" pointSize="21"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -53,11 +63,11 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="r0R-yU-sSa" firstAttribute="top" secondItem="PQP-O3-6hm" secondAttribute="top" constant="3" id="1jy-zw-fIs"/>
-                            <constraint firstAttribute="trailing" secondItem="JbA-h4-pzF" secondAttribute="trailing" constant="12" id="Ktg-XS-1n1"/>
-                            <constraint firstItem="JbA-h4-pzF" firstAttribute="top" secondItem="r0R-yU-sSa" secondAttribute="bottom" constant="-2" id="NND-pX-Njd"/>
-                            <constraint firstItem="JbA-h4-pzF" firstAttribute="leading" secondItem="PQP-O3-6hm" secondAttribute="leading" constant="15" id="Spa-tI-VYR"/>
-                            <constraint firstAttribute="bottom" secondItem="JbA-h4-pzF" secondAttribute="bottom" constant="7" id="avf-Kf-QXa"/>
+                            <constraint firstItem="JbA-h4-pzF" firstAttribute="leading" secondItem="PQP-O3-6hm" secondAttribute="leading" constant="15" id="WNQ-bW-TpS"/>
+                            <constraint firstAttribute="trailing" secondItem="JbA-h4-pzF" secondAttribute="trailing" constant="12" id="Wc0-1f-lnD"/>
+                            <constraint firstItem="JbA-h4-pzF" firstAttribute="top" secondItem="PQP-O3-6hm" secondAttribute="top" constant="25" id="ceY-AK-zJJ"/>
                             <constraint firstItem="r0R-yU-sSa" firstAttribute="leading" secondItem="PQP-O3-6hm" secondAttribute="leading" constant="15" id="rLj-DW-a7W"/>
+                            <constraint firstAttribute="bottom" secondItem="JbA-h4-pzF" secondAttribute="bottom" constant="9.6666666666666572" id="vBT-io-d8v"/>
                             <constraint firstAttribute="trailing" secondItem="r0R-yU-sSa" secondAttribute="trailing" constant="-2" id="vmi-Rr-vyB"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
@@ -70,16 +80,21 @@
                 </subviews>
                 <color key="backgroundColor" red="0.0" green="0.77647058823529413" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
                 <constraints>
+                    <constraint firstAttribute="trailing" secondItem="xYA-In-Kp5" secondAttribute="trailing" constant="10" id="7WA-Vy-aoI"/>
+                    <constraint firstItem="xYA-In-Kp5" firstAttribute="leading" secondItem="ePK-nN-WFC" secondAttribute="trailing" constant="6" id="7ZL-XP-33Y"/>
                     <constraint firstAttribute="bottom" secondItem="PQP-O3-6hm" secondAttribute="bottom" constant="10" id="Er9-6l-pUU"/>
                     <constraint firstAttribute="trailing" secondItem="PQP-O3-6hm" secondAttribute="trailing" constant="10" id="FAO-PH-hel"/>
                     <constraint firstItem="PQP-O3-6hm" firstAttribute="leading" secondItem="ePK-nN-WFC" secondAttribute="trailing" constant="6" id="MTp-nv-PZK"/>
                     <constraint firstItem="PQP-O3-6hm" firstAttribute="top" secondItem="eH8-Ec-xti" secondAttribute="top" constant="10" id="PTC-Me-oHR"/>
                     <constraint firstItem="ePK-nN-WFC" firstAttribute="leading" secondItem="eH8-Ec-xti" secondAttribute="leading" constant="7" id="g3d-l6-0bu"/>
                     <constraint firstItem="ePK-nN-WFC" firstAttribute="top" secondItem="eH8-Ec-xti" secondAttribute="top" constant="7" id="ggv-nl-FHq"/>
+                    <constraint firstAttribute="bottom" secondItem="xYA-In-Kp5" secondAttribute="bottom" constant="10" id="iM8-DG-BeR"/>
+                    <constraint firstItem="xYA-In-Kp5" firstAttribute="top" secondItem="eH8-Ec-xti" secondAttribute="top" constant="10" id="ivl-u9-FJL"/>
                 </constraints>
             </tableViewCellContentView>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
+                <outlet property="animatedView" destination="xYA-In-Kp5" id="aC2-Vz-Y0t"/>
                 <outlet property="avatarImageview" destination="ePK-nN-WFC" id="zx1-EE-LKw"/>
                 <outlet property="messageBackground" destination="PQP-O3-6hm" id="O0V-kI-hmN"/>
                 <outlet property="messageBody" destination="JbA-h4-pzF" id="qjw-qd-jRO"/>

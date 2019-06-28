@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 import ChameleonFramework
+import AnimatedGradientView
 
 class ChattingViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate {
     
@@ -73,17 +74,23 @@ class ChattingViewController: UIViewController, UITableViewDelegate, UITableView
         cell.messageBody.text = messageArray[indexPath.row].message
         cell.senderUsername.text = messageArray[indexPath.row].sender
         cell.avatarImageview.backgroundColor = UIColor(hexString: "#EF629F")!
+        
+        let selfAnimatedGradient = AnimatedGradientView(frame: view.bounds)
+        selfAnimatedGradient.animationValues = [(colors: ["#a0ceef", "#7F7FD5"], .up, .axial),
+                                            (colors: ["#7F7FD5", "#a0ceef"], .right, .axial)]
+        
+        let othersAnimatedGradient = AnimatedGradientView(frame: view.bounds)
+        othersAnimatedGradient.animationValues = [(colors: ["#EF629F", "#EECDA3"], .down, .axial),
+                                            (colors: ["#EECDA3", "#EF629F"], .left, .axial)]
 
         if cell.senderUsername.text == Auth.auth().currentUser?.email as String? {
             
-            cell.messageBackground.backgroundColor = UIColor(gradientStyle: UIGradientStyle.leftToRight, withFrame: cell.messageBackground.frame, andColors: [UIColor(hexString: "#7F7FD5")!, UIColor(hexString: "#86A8E7")!, UIColor(hexString: "#91EAE4")!])
+            cell.animatedView.addSubview(selfAnimatedGradient)
             cell.avatarImageview.backgroundColor = UIColor(hexString: "#7F7FD5")!
             
         }
         else {
-            
-            cell.messageBackground.backgroundColor = UIColor(gradientStyle: UIGradientStyle.leftToRight, withFrame: cell.messageBackground.frame, andColors: [UIColor(hexString: "#EF629F")!, UIColor(hexString: "#EECDA3")!])
-            
+            cell.animatedView.addSubview(othersAnimatedGradient)
         }
         
         return cell
@@ -150,6 +157,4 @@ class ChattingViewController: UIViewController, UITableViewDelegate, UITableView
 }
 
 //TODO: Automize height change for different screen
-//TODO: maybe make message bubble fancy (gradient flow cells?)
-//TODO: let user stay signed in?
 //TODO: redesign icon

@@ -14,6 +14,7 @@ class CustomMessageCell: UITableViewCell {
     @IBOutlet var avatarImageview: UIImageView!
     @IBOutlet var senderUsername: UILabel!
     @IBOutlet var messageBody: UILabel!
+    @IBOutlet var animatedView: UIView!
     
     
     override func awakeFromNib() {
