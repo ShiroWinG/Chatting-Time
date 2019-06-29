@@ -39,6 +39,9 @@ class LogInViewController: UIViewController {
             
             if error != nil {
                 print(error!._code)
+                
+                self.handleError(error!)
+                
                 SVProgressHUD.dismiss()
             }
             else {
@@ -50,6 +53,10 @@ class LogInViewController: UIViewController {
             }
         }
     }
+    
+    func handleError (_ error: Error) {
+        if let errorCode = AuthErrorCode(rawValue: error._code) {
+            errorMessage.text = errorCode.errorMessage
+        }
+    }
 }
-
-//TODO: add error messagess

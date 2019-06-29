@@ -47,6 +47,7 @@ class ChattingViewController: UIViewController, UITableViewDelegate, UITableView
     override func viewDidAppear(_ animated: Bool) {
         let scrollPoint = CGPoint(x: 0, y: self.messageTableView.contentSize.height - self.messageTableView.frame.size.height)
         self.messageTableView.setContentOffset(scrollPoint, animated: false)
+
     }
     
     //Go back to previous view
@@ -69,19 +70,19 @@ class ChattingViewController: UIViewController, UITableViewDelegate, UITableView
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
+        let selfAnimatedGradient = AnimatedGradientView(frame: view.bounds)
+        selfAnimatedGradient.animationValues = [(colors: ["#a0ceef", "#7F7FD5"], .up, .axial),
+                                                (colors: ["#7F7FD5", "#a0ceef"], .right, .axial)]
+        
+        let othersAnimatedGradient = AnimatedGradientView(frame: view.bounds)
+        othersAnimatedGradient.animationValues = [(colors: ["#EF629F", "#EECDA3"], .down, .axial),
+                                                  (colors: ["#EECDA3", "#EF629F"], .left, .axial)]
+
         let cell = tableView.dequeueReusableCell(withIdentifier: "customMessageCell", for: indexPath) as! CustomMessageCell
         
         cell.messageBody.text = messageArray[indexPath.row].message
         cell.senderUsername.text = messageArray[indexPath.row].sender
         cell.avatarImageview.backgroundColor = UIColor(hexString: "#EF629F")!
-        
-        let selfAnimatedGradient = AnimatedGradientView(frame: view.bounds)
-        selfAnimatedGradient.animationValues = [(colors: ["#a0ceef", "#7F7FD5"], .up, .axial),
-                                            (colors: ["#7F7FD5", "#a0ceef"], .right, .axial)]
-        
-        let othersAnimatedGradient = AnimatedGradientView(frame: view.bounds)
-        othersAnimatedGradient.animationValues = [(colors: ["#EF629F", "#EECDA3"], .down, .axial),
-                                            (colors: ["#EECDA3", "#EF629F"], .left, .axial)]
 
         if cell.senderUsername.text == Auth.auth().currentUser?.email as String? {
             
@@ -155,6 +156,3 @@ class ChattingViewController: UIViewController, UITableViewDelegate, UITableView
         }
     }
 }
-
-//TODO: Automize height change for different screen
-//TODO: redesign icon

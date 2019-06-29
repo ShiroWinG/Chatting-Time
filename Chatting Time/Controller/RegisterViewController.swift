@@ -11,8 +11,31 @@ import Firebase
 import SVProgressHUD
 import AnimatedGradientView
 
-class RegisterViewController: UIViewController {
+extension AuthErrorCode {
+    var errorMessage: String {
+        switch self {
+        case .emailAlreadyInUse:
+            return "The email is already in use with another account"
+        case .userNotFound:
+            return "Account not found for the specified user"
+        case .userDisabled:
+            return "Your account has been disabled"
+        case .invalidEmail, .invalidSender, .invalidRecipientEmail:
+            return "Please enter a valid email"
+        case .networkError:
+            return "Network error, please try again"
+        case .weakPassword:
+            return "Password must be 6 characters or longer"
+        case .wrongPassword:
+            return "Your password is incorrect"
+        default:
+            return "Unknown error occurred"
+        }
+    }
+}
 
+class RegisterViewController: UIViewController {
+    
     @IBOutlet var emailTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
     @IBOutlet var animatedView: UIView!
@@ -20,6 +43,8 @@ class RegisterViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        errorMessage.textColor.setStroke()
         
         emailTextField.autocorrectionType = .no
 
@@ -34,11 +59,15 @@ class RegisterViewController: UIViewController {
     @IBAction func registerPressed(_ sender: Any) {
         
         SVProgressHUD.show()
-        
+      
         Auth.auth().createUser(withEmail: emailTextField.text!, password: passwordTextField.text!) { (user, error) in
             
             if error != nil {
                 print(error!)
+                
+                self.handleError(error!)
+                
+                SVProgressHUD.dismiss()
             }
             else {
                 print("Registration Success")
@@ -49,6 +78,10 @@ class RegisterViewController: UIViewController {
             }
         }
     }
+    
+    func handleError (_ error: Error) {
+        if let errorCode = AuthErrorCode(rawValue: error._code) {
+            errorMessage.text = errorCode.errorMessage
+        }
+    }
 }
-
-//TODO: add error messages

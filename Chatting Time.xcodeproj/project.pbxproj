@@ -42,6 +42,8 @@
 		45B5D0CC22655464009B90BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		45B5D0CE22655464009B90BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		45EE6A3F22C32E9800FE76E2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		45EE6A4122C8108300FE76E2 /* SF-Pro-Display-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Bold.otf"; sourceTree = "<group>"; };
+		45EE6A4222C8119000FE76E2 /* SF-Pro-Display-Heavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Heavy.otf"; sourceTree = "<group>"; };
 		7CB437CCEB7C7C9CDFB40054 /* Pods-Chatting Time.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chatting Time.release.xcconfig"; path = "Target Support Files/Pods-Chatting Time/Pods-Chatting Time.release.xcconfig"; sourceTree = "<group>"; };
 		C76483CDB79B49A8B4FAA84D /* Pods_Chatting_Time.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Chatting_Time.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -61,7 +63,9 @@
 		452CBB1122821844008FF54C /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				45EE6A4122C8108300FE76E2 /* SF-Pro-Display-Bold.otf */,
 				452CBB1322821852008FF54C /* SF-Pro-Display-Light.otf */,
+				45EE6A4222C8119000FE76E2 /* SF-Pro-Display-Heavy.otf */,
 				452CBB1222821852008FF54C /* SF-Pro-Display-Thin.otf */,
 			);
 			path = Fonts;
