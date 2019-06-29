@@ -43,12 +43,13 @@ class ChattingViewController: UIViewController, UITableViewDelegate, UITableView
         retrieveMessages()
     }
     
-    //Go straight to bottom
+    /*Go straight to bottom - deprecated
     override func viewDidAppear(_ animated: Bool) {
         let scrollPoint = CGPoint(x: 0, y: self.messageTableView.contentSize.height - self.messageTableView.frame.size.height)
         self.messageTableView.setContentOffset(scrollPoint, animated: false)
 
     }
+    */
     
     //Go back to previous view
     @IBAction func logOutPressed(_ sender: Any) {
@@ -153,6 +154,9 @@ class ChattingViewController: UIViewController, UITableViewDelegate, UITableView
             
             self.configureTableView()
             self.messageTableView.reloadData()
+            
+            let indexPath = IndexPath(row: self.messageArray.count-1, section: 0)
+            self.messageTableView.scrollToRow(at: indexPath, at: .bottom, animated: false)
         }
     }
 }
