@@ -3,21 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>1039585583154-p2e99mmo9bef3mi4s57gfvrrctek7rqb.apps.googleusercontent.com</string>
+	<string>974021799568-0k0tm42f2sgfln9uec7dqjnclg41ansg.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.1039585583154-p2e99mmo9bef3mi4s57gfvrrctek7rqb</string>
+	<string>com.googleusercontent.apps.974021799568-0k0tm42f2sgfln9uec7dqjnclg41ansg</string>
 	<key>API_KEY</key>
-	<string>AIzaSyCVdamAbB3aPaFW_em4MyAUszjvEAKAFDs</string>
+	<string>AIzaSyCVv5ZWGVOYstz5EBApqVFYz8qtWRAPRPk</string>
 	<key>GCM_SENDER_ID</key>
-	<string>1039585583154</string>
+	<string>974021799568</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>com.jayzhang.Chatting-Time</string>
 	<key>PROJECT_ID</key>
-	<string>chattingtime-b2da8</string>
+	<string>chattingtime-81f1a</string>
 	<key>STORAGE_BUCKET</key>
-	<string>chattingtime-b2da8.appspot.com</string>
+	<string>chattingtime-81f1a.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -29,8 +29,8 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:1039585583154:ios:9cd346dcbcb8ee2e</string>
+	<string>1:974021799568:ios:9cd346dcbcb8ee2e</string>
 	<key>DATABASE_URL</key>
-	<string>https://chattingtime-b2da8.firebaseio.com</string>
+	<string>https://chattingtime-81f1a.firebaseio.com</string>
 </dict>
 </plist>

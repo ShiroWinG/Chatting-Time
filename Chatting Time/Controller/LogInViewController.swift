@@ -23,6 +23,7 @@ class LogInViewController: UIViewController {
         
         emailTextField.autocorrectionType = .no
         
+        //Set up animation view here
         let animatedGradient = AnimatedGradientView(frame: view.bounds)
         animatedGradient.animationValues = [(colors: ["#2BC0E4", "#EAECC6"], .up, .axial),
                                             (colors: ["#C6FFDD", "#f7797d"], .right, .axial),
@@ -32,26 +33,20 @@ class LogInViewController: UIViewController {
     }
     
     @IBAction func logInPressed(_ sender: Any) {
-        
         SVProgressHUD.show()
         
         Auth.auth().signIn(withEmail: emailTextField.text!, password: passwordTextField.text!) { (user, error) in
             
             if error != nil {
                 print(error!._code)
-                
                 self.handleError(error!)
-                
-                SVProgressHUD.dismiss()
             }
             else {
-                print("Log in successful")
-                
-                SVProgressHUD.dismiss()
-                
                 self.performSegue(withIdentifier: "goToChat", sender: self)
             }
         }
+        
+        SVProgressHUD.dismiss()
     }
     
     func handleError (_ error: Error) {

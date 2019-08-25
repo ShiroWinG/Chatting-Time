@@ -21,13 +21,11 @@ class WelcomeViewController: UIViewController, CLLocationManagerDelegate {
     
     let WEATHER_URL = "http://api.openweathermap.org/data/2.5/weather"
     let APP_ID = "e72ca729af228beabd5d20e3b7749713"
-    /***Get your own App ID at https://openweathermap.org/appid ****/
+    let locationManager = CLLocationManager()
     
     var temp: Double = 0
     var city: String = ""
-    
-    let locationManager = CLLocationManager()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -46,45 +44,8 @@ class WelcomeViewController: UIViewController, CLLocationManagerDelegate {
         animatedView.addSubview(animatedGradient)
     }
     
-    //Get weather
-    func getWeatherData(url: String, parameters: [String: String]) {
-        
-        Alamofire.request(url, method: .get, parameters: parameters).responseJSON {
-            response in
-            if response.result.isSuccess {
-                
-                let weatherJSON : JSON = JSON(response.result.value!)
-                self.updateWeatherData(json: weatherJSON)
-                
-            }
-            else {
-                self.cityLabel.text = "Connection Issues"
-            }
-        }
-    }
+    //MARK: - location methods and pass the result to query for weather
     
-    //Update weather method
-    func updateWeatherData(json: JSON) {
-        
-        if let tempResult = json["main"]["temp"].double {
-            
-            temp = (9/5) * (tempResult - 273) + 32
-            city = json["name"].stringValue
-            
-            updateUIWithWeatherData()
-        }
-        else {
-            cityLabel.text = "Weather Unavailable D:"
-        }
-    }
-    
-    //Update UI with weather data
-    func updateUIWithWeatherData() {
-        cityLabel.text = city
-        tempLabel.text = String(Int(temp)) + "°F"
-    }
-    
-    //Write the didUpdateLocations method here:
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let location = locations[locations.count - 1]
         if location.horizontalAccuracy > 0 {
@@ -100,9 +61,44 @@ class WelcomeViewController: UIViewController, CLLocationManagerDelegate {
         }
     }
     
-    //Write the didFailWithError method here:
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print(error)
         cityLabel.text = "Location Unavailable :["
+    }
+    
+    //MARK: - methods for getting and displaying weather information
+    
+    func getWeatherData(url: String, parameters: [String: String]) {
+        Alamofire.request(url, method: .get, parameters: parameters).responseJSON {
+            response in
+            if response.result.isSuccess {
+                
+                let weatherJSON : JSON = JSON(response.result.value!)
+                self.updateWeatherData(json: weatherJSON)
+                
+            }
+            else {
+                self.cityLabel.text = "Connection Issues"
+            }
+        }
+    }
+    
+    func updateWeatherData(json: JSON) {
+        
+        if let tempResult = json["main"]["temp"].double {
+            
+            temp = (9/5) * (tempResult - 273) + 32
+            city = json["name"].stringValue
+            
+            updateUIWithWeatherData()
+        }
+        else {
+            cityLabel.text = "Weather Unavailable D:"
+        }
+    }
+    
+    func updateUIWithWeatherData() {
+        cityLabel.text = city
+        tempLabel.text = String(Int(temp)) + "°F"
     }
 }

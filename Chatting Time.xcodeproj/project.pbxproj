@@ -143,8 +143,8 @@
 			children = (
 				45B5D0C222655463009B90BD /* AppDelegate.swift */,
 				45B5D0C422655463009B90BD /* WelcomeViewController.swift */,
-				45A3B551226914DF005CC12C /* LogInViewController.swift */,
 				45A3B5532269150D005CC12C /* RegisterViewController.swift */,
+				45A3B551226914DF005CC12C /* LogInViewController.swift */,
 				45A3B55522691534005CC12C /* ChattingViewController.swift */,
 			);
 			path = Controller;
@@ -465,6 +465,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q369FK9888;
 				INFOPLIST_FILE = "$(SRCROOT)/Chatting Time/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -472,7 +473,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jayzhang.Chatting-Time";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -484,6 +485,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q369FK9888;
 				INFOPLIST_FILE = "$(SRCROOT)/Chatting Time/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -491,7 +493,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jayzhang.Chatting-Time";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

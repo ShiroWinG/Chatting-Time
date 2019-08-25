@@ -11,6 +11,53 @@ import Firebase
 import SVProgressHUD
 import AnimatedGradientView
 
+class RegisterViewController: UIViewController {
+    
+    @IBOutlet var emailTextField: UITextField!
+    @IBOutlet var passwordTextField: UITextField!
+    @IBOutlet var animatedView: UIView!
+    @IBOutlet var errorMessage: UILabel!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        errorMessage.textColor.setStroke()
+        
+        emailTextField.autocorrectionType = .no
+
+        //Set up animation view here
+        let animatedGradient = AnimatedGradientView(frame: view.bounds)
+        animatedGradient.animationValues = [(colors: ["#2BC0E4", "#EAECC6"], .up, .axial),
+                                            (colors: ["#C6FFDD", "#f7797d"], .right, .axial),
+                                            (colors: ["#00d2ff", "#E5E5BE"], .down, .axial),
+                                            (colors: ["#c2e59c", "#ffc3a0"], .left, .axial)]
+        animatedView.addSubview(animatedGradient)
+    }
+    
+    @IBAction func registerPressed(_ sender: Any) {
+        SVProgressHUD.show()
+      
+        Auth.auth().createUser(withEmail: emailTextField.text!, password: passwordTextField.text!) { (user, error) in
+            
+            if error != nil {
+                print(error!)
+                self.handleError(error!)
+            }
+            else {
+                self.performSegue(withIdentifier: "goToChat", sender: self)
+            }
+        }
+        
+        SVProgressHUD.dismiss()
+    }
+    
+    func handleError (_ error: Error) {
+        if let errorCode = AuthErrorCode(rawValue: error._code) {
+            errorMessage.text = errorCode.errorMessage
+        }
+    }
+}
+
 extension AuthErrorCode {
     var errorMessage: String {
         switch self {
@@ -30,58 +77,6 @@ extension AuthErrorCode {
             return "Your password is incorrect"
         default:
             return "Unknown error occurred"
-        }
-    }
-}
-
-class RegisterViewController: UIViewController {
-    
-    @IBOutlet var emailTextField: UITextField!
-    @IBOutlet var passwordTextField: UITextField!
-    @IBOutlet var animatedView: UIView!
-    @IBOutlet var errorMessage: UILabel!
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        errorMessage.textColor.setStroke()
-        
-        emailTextField.autocorrectionType = .no
-
-        let animatedGradient = AnimatedGradientView(frame: view.bounds)
-        animatedGradient.animationValues = [(colors: ["#2BC0E4", "#EAECC6"], .up, .axial),
-                                            (colors: ["#C6FFDD", "#f7797d"], .right, .axial),
-                                            (colors: ["#00d2ff", "#E5E5BE"], .down, .axial),
-                                            (colors: ["#c2e59c", "#ffc3a0"], .left, .axial)]
-        animatedView.addSubview(animatedGradient)
-    }
-    
-    @IBAction func registerPressed(_ sender: Any) {
-        
-        SVProgressHUD.show()
-      
-        Auth.auth().createUser(withEmail: emailTextField.text!, password: passwordTextField.text!) { (user, error) in
-            
-            if error != nil {
-                print(error!)
-                
-                self.handleError(error!)
-                
-                SVProgressHUD.dismiss()
-            }
-            else {
-                print("Registration Success")
-                
-                SVProgressHUD.dismiss()
-                
-                self.performSegue(withIdentifier: "goToChat", sender: self)
-            }
-        }
-    }
-    
-    func handleError (_ error: Error) {
-        if let errorCode = AuthErrorCode(rawValue: error._code) {
-            errorMessage.text = errorCode.errorMessage
         }
     }
 }
